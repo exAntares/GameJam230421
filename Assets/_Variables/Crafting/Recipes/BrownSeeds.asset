@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
+  m_Name: BrownSeeds
+  m_EditorClassIdentifier: 
+  Ingredient1: {fileID: 2692574951509842508, guid: 12daf3a0fe8fb4b0eb3c86112f003018, type: 3}
+  ShouldConsume1: 1
+  Ingredient2: {fileID: 2692574951509842508, guid: 11aa1adfac3ca4beabc6718f521af97b, type: 3}
+  ShouldConsume2: 0
+  CreationTime: 1
+  SpawnResult: {fileID: 2692574951509842508, guid: 70892da3d97fd4ae0bf221ce6ce2a37c, type: 3}
