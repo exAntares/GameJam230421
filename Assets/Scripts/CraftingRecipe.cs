@@ -10,5 +10,5 @@ public class CraftingRecipe : ScriptableObject {
     public bool ShouldConsume2;
     
     public float CreationTime;
-    public CraftingIngredient SpawnResult;
+    public CraftingIngredient[] Results;
 }

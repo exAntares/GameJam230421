@@ -17,4 +17,5 @@ MonoBehaviour:
   Ingredient2: {fileID: 2692574951509842508, guid: 5f7371291006d2b49851b8614d9504f2, type: 3}
   ShouldConsume2: 1
   CreationTime: 1
-  SpawnResult: {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}
+  Results:
+  - {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}

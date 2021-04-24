@@ -78,13 +78,16 @@ public class CraftingSystem : MonoBehaviour {
                 }
             }
 
-            var craftingIngredient = Instantiate(craftingRecipe.SpawnResult);
-            var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
-            var ingredient2Position = craftingInstance.InstanceIngredient2.transform.position;
-            var spawnPos = ingredient1Position.y > ingredient2Position.y
+            foreach (var craftingRecipeResult in craftingRecipe.Results) {
+                var craftingIngredient = Instantiate(craftingRecipeResult);
+                var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
+                var ingredient2Position = craftingInstance.InstanceIngredient2.transform.position;
+                var spawnPos = ingredient1Position.y > ingredient2Position.y
                     ? ingredient1Position
                     : ingredient2Position;
-            craftingIngredient.transform.position = spawnPos;
+                craftingIngredient.transform.position = spawnPos;
+            }
+
             _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
         }
     }
