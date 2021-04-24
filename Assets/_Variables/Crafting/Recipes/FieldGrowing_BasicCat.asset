@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
+  m_Name: FieldGrowing_BasicCat
+  m_EditorClassIdentifier: 
+  Ingredient1: {fileID: 2692574951509842508, guid: 9e7508130508d364ebf087650e8652d6, type: 3}
+  ShouldConsume1: 1
+  Ingredient2: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
+  ShouldConsume2: 1
+  CreationTime: 0.5
+  SpawnResult: {fileID: 2692574951509842508, guid: 029127e1d61bb6840b9cc71b8fcbfa06, type: 3}
