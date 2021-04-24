@@ -119,6 +119,7 @@ public class CraftingSystem : MonoBehaviour {
             _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
                 InstanceIngredient1 = ingredient,
                 InstanceIngredient2 = null,
+                LoadingInstance = Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
                 StartTimestamp = Time.realtimeSinceStartup,
                 EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
             });
