@@ -16,7 +16,10 @@ public class CraftingIngredient : MonoBehaviour {
 #endif
     }
 
-    private void Awake() => _craftingSystem = FindObjectOfType<CraftingSystem>();
+    private void Awake() {
+        _craftingSystem = FindObjectOfType<CraftingSystem>();
+        _craftingSystem.OnCraftingItemSpawned(this);
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         var craftingIngredient = other.GetComponent<CraftingIngredient>();

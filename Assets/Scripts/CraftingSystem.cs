@@ -56,39 +56,42 @@ public class CraftingSystem : MonoBehaviour {
             }
         }
         
-        foreach (var craftingRecipe in alreadyDone) {
-            var craftingInstance = _onGoingRecipesEndtimestamp[craftingRecipe];
-            if (craftingRecipe.ShouldConsume1) {
-                if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
-                    Destroy(craftingInstance.InstanceIngredient1.gameObject);
-                }
-                    
-                if (craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
-                    Destroy(craftingInstance.InstanceIngredient2.gameObject);
-                }
-            }
-
-            if (craftingRecipe.ShouldConsume2) {
-                if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
-                    Destroy(craftingInstance.InstanceIngredient1.gameObject);
-                }
-                    
-                if (craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
-                    Destroy(craftingInstance.InstanceIngredient2.gameObject);
-                }
-            }
-
-            foreach (var craftingRecipeResult in craftingRecipe.Results) {
-                var craftingIngredient = Instantiate(craftingRecipeResult);
-                var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
-                var ingredient2Position = craftingInstance.InstanceIngredient2.transform.position;
-                var spawnPos = ingredient1Position.y > ingredient2Position.y
-                    ? ingredient1Position
-                    : ingredient2Position;
-                craftingIngredient.transform.position = spawnPos;
-            }
-
+        foreach (CraftingRecipe craftingRecipe in alreadyDone) {
+            ResolveRecipe(craftingRecipe);
             _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
+        }
+    }
+
+    private void ResolveRecipe(CraftingRecipe craftingRecipe) {
+        CraftingInstance craftingInstance = _onGoingRecipesEndtimestamp[craftingRecipe];
+        if (craftingRecipe.ShouldConsume1) {
+            if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
+                Destroy(craftingInstance.InstanceIngredient1.gameObject);
+            }
+                    
+            if (craftingInstance.InstanceIngredient2 != null && craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
+                Destroy(craftingInstance.InstanceIngredient2.gameObject);
+            }
+        }
+
+        if (craftingRecipe.ShouldConsume2) {
+            if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
+                Destroy(craftingInstance.InstanceIngredient1.gameObject);
+            }
+                    
+            if (craftingInstance.InstanceIngredient2 != null && craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
+                Destroy(craftingInstance.InstanceIngredient2.gameObject);
+            }
+        }
+
+        foreach (var craftingRecipeResult in craftingRecipe.Results) {
+            var craftingIngredient = Instantiate(craftingRecipeResult);
+            var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
+            var ingredient2Position = craftingInstance.InstanceIngredient2 != null ? craftingInstance.InstanceIngredient2.transform.position : ingredient1Position;
+            var spawnPos = ingredient1Position.y > ingredient2Position.y
+                ? ingredient1Position
+                : ingredient2Position;
+            craftingIngredient.transform.position = spawnPos;
         }
     }
 
@@ -98,6 +101,29 @@ public class CraftingSystem : MonoBehaviour {
         }
         list.Add(craftingRecipe);
         dictionary[ingredient] = list;
+    }
+
+    public void OnCraftingItemSpawned(CraftingIngredient ingredient) {
+        var craftingRecipe = GetRecipeForIngredient(ingredient);
+        if (craftingRecipe != null && !_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out _)) {
+            _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
+                InstanceIngredient1 = ingredient,
+                InstanceIngredient2 = null,
+                EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
+            });
+            Debug.Log($"START crafting recipe {craftingRecipe}");
+        }
+    }
+
+    private CraftingRecipe GetRecipeForIngredient(CraftingIngredient ingredient) {
+        if (_recipesByIngredient.TryGetValue(ingredient.CraftingId, out var recipes)) {
+            foreach (var craftingRecipe in recipes) {
+                if (craftingRecipe.Ingredient2 == null && craftingRecipe.Ingredient1.CraftingId == ingredient.CraftingId) {
+                    return craftingRecipe;
+                }
+            }
+        }
+        return null;
     }
 
     public void OnCraftingTriggerEnter2D(CraftingIngredient ingredient, CraftingIngredient otherIngredient) {
@@ -123,10 +149,12 @@ public class CraftingSystem : MonoBehaviour {
     private CraftingRecipe GetRecipeForIngredients(CraftingIngredient ingredient, CraftingIngredient otherIngredient) {
         if (_recipesByIngredient.TryGetValue(ingredient.CraftingId, out var recipes)) {
             foreach (var craftingRecipe in recipes) {
-                if (craftingRecipe.Ingredient1.CraftingId == ingredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == ingredient.CraftingId) {
-                    if (craftingRecipe.Ingredient1.CraftingId == otherIngredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == otherIngredient.CraftingId) {
-                        return craftingRecipe;
-                    }
+                if (craftingRecipe.Ingredient1 != null && craftingRecipe.Ingredient2 != null) {
+                    if (craftingRecipe.Ingredient1.CraftingId == ingredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == ingredient.CraftingId) {
+                        if (craftingRecipe.Ingredient1.CraftingId == otherIngredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == otherIngredient.CraftingId) {
+                            return craftingRecipe;
+                        }
+                    }                    
                 }
             }
         }
