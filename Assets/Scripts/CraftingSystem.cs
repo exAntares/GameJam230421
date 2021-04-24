@@ -59,27 +59,32 @@ public class CraftingSystem : MonoBehaviour {
         foreach (var craftingRecipe in alreadyDone) {
             var craftingInstance = _onGoingRecipesEndtimestamp[craftingRecipe];
             if (craftingRecipe.ShouldConsume1) {
-                if (craftingInstance.Ingredient1.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
-                    Destroy(craftingInstance.Ingredient1.gameObject);
+                if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
+                    Destroy(craftingInstance.InstanceIngredient1.gameObject);
                 }
                     
-                if (craftingInstance.Ingredient2.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
-                    Destroy(craftingInstance.Ingredient2.gameObject);
+                if (craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
+                    Destroy(craftingInstance.InstanceIngredient2.gameObject);
                 }
             }
 
             if (craftingRecipe.ShouldConsume2) {
-                if (craftingInstance.Ingredient1.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
-                    Destroy(craftingInstance.Ingredient1.gameObject);
+                if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
+                    Destroy(craftingInstance.InstanceIngredient1.gameObject);
                 }
                     
-                if (craftingInstance.Ingredient2.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
-                    Destroy(craftingInstance.Ingredient2.gameObject);
+                if (craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
+                    Destroy(craftingInstance.InstanceIngredient2.gameObject);
                 }
             }
 
             var craftingIngredient = Instantiate(craftingRecipe.SpawnResult);
-            craftingIngredient.transform.position = craftingInstance.Ingredient1.transform.position;
+            var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
+            var ingredient2Position = craftingInstance.InstanceIngredient2.transform.position;
+            var spawnPos = ingredient1Position.y > ingredient2Position.y
+                    ? ingredient1Position
+                    : ingredient2Position;
+            craftingIngredient.transform.position = spawnPos;
             _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
         }
     }
@@ -96,8 +101,8 @@ public class CraftingSystem : MonoBehaviour {
         var craftingRecipe = GetRecipeForIngredients(ingredient, otherIngredient);
         if (craftingRecipe != null && !_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out _)) {
             _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
-                Ingredient1 = ingredient,
-                Ingredient2 = otherIngredient,
+                InstanceIngredient1 = ingredient,
+                InstanceIngredient2 = otherIngredient,
                 EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
             });
             Debug.Log($"START crafting recipe {craftingRecipe}");
@@ -134,7 +139,7 @@ public class CraftingSystem : MonoBehaviour {
 
     private class CraftingInstance {
         public float EndTimestamp;
-        public CraftingIngredient Ingredient1;
-        public CraftingIngredient Ingredient2;
+        public CraftingIngredient InstanceIngredient1;
+        public CraftingIngredient InstanceIngredient2;
     }
 }
