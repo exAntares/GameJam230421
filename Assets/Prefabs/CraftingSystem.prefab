@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17e28379a8534d78b44cecca510d2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loadingFeedbackPrefab: {fileID: 1202904502971038265, guid: f2072cf47aebf4381bb38d302488c448, type: 3}
   AllRecipesByCraftingIngredient:
   - IngredientGuid: 51f9961e349214b08a57a5df7c031b30
     Recipes:
@@ -51,6 +52,9 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
     - {fileID: 11400000, guid: cd4bfa4ca10b2416d8768a9d4c5b2946, type: 2}
+  - IngredientGuid: 029127e1d61bb6840b9cc71b8fcbfa06
+    Recipes:
+    - {fileID: 11400000, guid: 127b7b7acf9fbab4f8dba434d38c0dd3, type: 2}
   - IngredientGuid: 9e7508130508d364ebf087650e8652d6
     Recipes:
     - {fileID: 11400000, guid: 90aacf6f47ae3e742ad8a9d757dbf8e7, type: 2}
