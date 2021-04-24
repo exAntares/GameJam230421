@@ -54551,6 +54551,7 @@ GameObject:
   - component: {fileID: 1059204748}
   - component: {fileID: 1059204747}
   - component: {fileID: 1059204746}
+  - component: {fileID: 1059204749}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -54611,6 +54612,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059204749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059204745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fda8b8da37584ab9aea3cb1da2c9dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkeletonAnimation: {fileID: 1521250514}
+  _drag: {fileID: 11400000, guid: 1f88355b1d4d14ec78e637d0aa6ee95b, type: 2}
+  _fall: {fileID: 11400000, guid: 84716b294700d48a7a5a64b8dd83c723, type: 2}
+  _idle: {fileID: 11400000, guid: 372ee988d2a5942e6be8ba2cb44552f6, type: 2}
 --- !u!1001 &1367811778
 PrefabInstance:
   m_ObjectHideFlags: 0
