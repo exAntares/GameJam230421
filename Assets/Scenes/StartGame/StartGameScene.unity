@@ -556,19 +556,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 406167941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 660600245}
-        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &406167945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +666,8 @@ PlayableDirector:
     value: {fileID: 1549205588}
   - key: {fileID: 6478831365369760579, guid: 6cab0d1674c2fdd468b60f4e7fe1f100, type: 2}
     value: {fileID: 1458080852}
+  - key: {fileID: -1389738973903399744, guid: 6cab0d1674c2fdd468b60f4e7fe1f100, type: 2}
+    value: {fileID: 406167943}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &478011431
@@ -850,6 +840,8 @@ PlayableDirector:
     value: {fileID: 3720015}
   - key: {fileID: -3325779817978053038, guid: 50705e0691833c644aaf40f5359fc328, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 542067463605597215, guid: 50705e0691833c644aaf40f5359fc328, type: 2}
+    value: {fileID: 406167943}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &740411317
@@ -1079,11 +1071,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"FieldCollider","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SeedCollider","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"DirectorStartGame","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"FieldCollider","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SeedCollider","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"DirectorStartGame","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SeedButton","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"DireactorOnCick","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 853494371}
     - {fileID: 406167946}
     - {fileID: 1623965263}
+    - {fileID: 406167944}
+    - {fileID: 660600245}
 --- !u!1 &824222446
 GameObject:
   m_ObjectHideFlags: 0
