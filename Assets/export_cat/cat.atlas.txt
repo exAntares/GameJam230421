@@ -1,236 +1,243 @@
 
 cat.png
-size: 512,512
+size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 arm2
-  rotate: false
-  xy: 466, 469
+  rotate: true
+  xy: 677, 77
   size: 32, 41
   orig: 32, 41
   offset: 0, 0
   index: -1
 body1
   rotate: false
-  xy: 226, 2
+  xy: 738, 153
   size: 160, 100
   orig: 190, 219
   offset: 19, 0
   index: -1
 body_patch
   rotate: true
-  xy: 388, 70
+  xy: 943, 161
+  size: 45, 40
+  orig: 45, 40
+  offset: 0, 0
+  index: -1
+body_patch_rainbow
+  rotate: true
+  xy: 947, 208
   size: 45, 40
   orig: 45, 40
   offset: 0, 0
   index: -1
 cheek
-  rotate: false
-  xy: 202, 147
+  rotate: true
+  xy: 2, 5
   size: 19, 25
   orig: 19, 25
   offset: 0, 0
   index: -1
 eye_drag
   rotate: false
-  xy: 180, 4
+  xy: 900, 158
   size: 41, 48
   orig: 41, 48
   offset: 0, 0
   index: -1
 eyeball1
   rotate: false
-  xy: 394, 440
+  xy: 663, 3
   size: 70, 70
   orig: 70, 70
   offset: 0, 0
   index: -1
 eyebrow1
   rotate: false
-  xy: 424, 4
+  xy: 56, 5
   size: 19, 19
   orig: 19, 19
   offset: 0, 0
   index: -1
 eyebrow2
-  rotate: true
-  xy: 202, 174
+  rotate: false
+  xy: 985, 180
   size: 37, 26
   orig: 37, 26
   offset: 0, 0
   index: -1
 eyelidBOTTOM
-  rotate: true
-  xy: 435, 368
+  rotate: false
+  xy: 605, 75
   size: 70, 34
   orig: 70, 34
   offset: 0, 0
   index: -1
 eyelidTOP
-  rotate: true
-  xy: 180, 54
+  rotate: false
+  xy: 396, 17
   size: 74, 44
   orig: 74, 44
   offset: 0, 0
   index: -1
 foot1
-  rotate: false
-  xy: 375, 117
+  rotate: true
+  xy: 735, 17
   size: 56, 43
   orig: 56, 43
   offset: 0, 0
   index: -1
 foot_drag
   rotate: false
-  xy: 165, 260
+  xy: 472, 5
   size: 52, 56
   orig: 55, 58
   offset: 3, 0
   index: -1
 hand_thumb
-  rotate: false
-  xy: 2, 318
+  rotate: true
+  xy: 2, 26
   size: 227, 192
   orig: 227, 192
   offset: 0, 0
   index: -1
 head
   rotate: true
-  xy: 231, 320
+  xy: 196, 63
   size: 190, 161
   orig: 190, 219
   offset: 0, 58
   index: -1
 head2
   rotate: true
-  xy: 2, 126
+  xy: 359, 63
   size: 190, 161
   orig: 190, 219
   offset: 0, 58
   index: -1
 index_finger
-  rotate: false
-  xy: 433, 25
+  rotate: true
+  xy: 526, 4
   size: 68, 135
   orig: 68, 135
   offset: 0, 0
   index: -1
 middle_fingers
-  rotate: true
-  xy: 231, 104
+  rotate: false
+  xy: 522, 111
   size: 214, 142
   orig: 214, 142
   offset: 0, 0
   index: -1
 mouth1
-  rotate: false
-  xy: 65, 6
+  rotate: true
+  xy: 121, 7
   size: 17, 11
   orig: 17, 11
   offset: 0, 0
   index: -1
 mouth2
-  rotate: false
-  xy: 212, 233
+  rotate: true
+  xy: 29, 7
   size: 17, 25
   orig: 17, 25
   offset: 0, 0
   index: -1
 mouth3
-  rotate: false
-  xy: 2, 4
+  rotate: true
+  xy: 106, 7
   size: 17, 13
   orig: 17, 13
   offset: 0, 0
   index: -1
 mouth4
   rotate: true
-  xy: 36, 5
+  xy: 77, 12
   size: 12, 27
   orig: 12, 27
   offset: 0, 0
   index: -1
 nose1
   rotate: false
-  xy: 97, 9
+  xy: 77, 2
   size: 11, 8
   orig: 12, 8
   offset: 1, 0
   index: -1
 pinky_finger
-  rotate: true
-  xy: 375, 162
+  rotate: false
+  xy: 757, 77
   size: 156, 74
   orig: 156, 74
   offset: 0, 0
   index: -1
 puke_drop
   rotate: true
-  xy: 110, 9
+  xy: 90, 2
   size: 8, 7
   orig: 8, 7
   offset: 0, 0
   index: -1
 puke_ground
-  rotate: true
-  xy: 394, 349
+  rotate: false
+  xy: 305, 22
   size: 89, 39
   orig: 89, 39
   offset: 0, 0
   index: -1
 pupil1
   rotate: false
-  xy: 165, 213
+  xy: 900, 208
   size: 45, 45
   orig: 45, 45
   offset: 0, 0
   index: -1
 pupil_white1
   rotate: false
-  xy: 21, 4
+  xy: 134, 11
   size: 13, 13
   orig: 13, 13
   offset: 0, 0
   index: -1
 rainbow_puke
-  rotate: false
-  xy: 119, 17
+  rotate: true
+  xy: 196, 2
   size: 59, 107
   orig: 59, 108
   offset: 0, 0
   index: -1
 shadow
-  rotate: true
-  xy: 165, 130
+  rotate: false
+  xy: 522, 74
   size: 81, 35
   orig: 83, 35
   offset: 1, 0
   index: -1
 sparkle1
-  rotate: false
-  xy: 388, 33
+  rotate: true
+  xy: 720, 75
   size: 34, 35
   orig: 34, 35
   offset: 0, 0
   index: -1
 sparkle2
   rotate: false
-  xy: 84, 6
+  xy: 149, 13
   size: 11, 11
   orig: 11, 11
   offset: 0, 0
   index: -1
 tail
-  rotate: true
-  xy: 2, 19
+  rotate: false
+  xy: 915, 41
   size: 105, 115
   orig: 105, 115
   offset: 0, 0
   index: -1
 whiskers1
-  rotate: false
-  xy: 388, 3
+  rotate: true
+  xy: 989, 219
   size: 34, 28
   orig: 34, 28
   offset: 0, 0
