@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
   m_Name: BrownSeeds
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: 12daf3a0fe8fb4b0eb3c86112f003018, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: 3eb452aa227304db9b72d969a965741c, type: 3}
   ShouldConsume1: 1
   Ingredient2: {fileID: 2692574951509842508, guid: 11aa1adfac3ca4beabc6718f521af97b, type: 3}
   ShouldConsume2: 0
-  CreationTime: 1
+  CreationTime: 5
   Results:
   - {fileID: 2692574951509842508, guid: 70892da3d97fd4ae0bf221ce6ce2a37c, type: 3}
