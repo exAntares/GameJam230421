@@ -6,71 +6,141 @@ filter: Linear,Linear
 repeat: none
 arm1
   rotate: false
-  xy: 440, 146
+  xy: 447, 132
   size: 48, 69
   orig: 48, 69
   offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 2, 43
-  size: 320, 365
-  orig: 320, 365
+  xy: 2, 145
+  size: 317, 365
+  orig: 317, 365
   offset: 0, 0
+  index: -1
+cheek
+  rotate: false
+  xy: 45, 2
+  size: 29, 40
+  orig: 31, 41
+  offset: 1, 1
   index: -1
 eyeball1
   rotate: false
-  xy: 324, 100
+  xy: 182, 28
   size: 114, 115
   orig: 116, 116
   offset: 1, 1
   index: -1
 eyebrow1
   rotate: false
-  xy: 440, 114
+  xy: 76, 12
   size: 30, 30
   orig: 32, 32
   offset: 1, 1
   index: -1
+eyelidBOTTOM
+  rotate: true
+  xy: 447, 396
+  size: 114, 54
+  orig: 116, 56
+  offset: 1, 1
+  index: -1
+eyelidTOP
+  rotate: false
+  xy: 298, 7
+  size: 121, 71
+  orig: 123, 73
+  offset: 1, 1
+  index: -1
 foot1
   rotate: true
-  xy: 324, 4
+  xy: 321, 416
   size: 94, 72
   orig: 94, 72
   offset: 0, 0
   index: -1
 mouth1
   rotate: true
-  xy: 472, 117
-  size: 27, 17
+  xy: 108, 13
+  size: 29, 19
   orig: 29, 19
-  offset: 1, 1
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: true
+  xy: 2, 13
+  size: 29, 41
+  orig: 29, 41
+  offset: 0, 0
   index: -1
 nose1
-  rotate: false
-  xy: 472, 104
+  rotate: true
+  xy: 148, 2
   size: 17, 11
   orig: 20, 13
   offset: 2, 1
   index: -1
+puke_drop
+  rotate: false
+  xy: 152, 31
+  size: 11, 11
+  orig: 13, 12
+  offset: 1, 1
+  index: -1
+puke_ground
+  rotate: false
+  xy: 298, 80
+  size: 147, 63
+  orig: 149, 65
+  offset: 1, 1
+  index: -1
 pupil1
   rotate: false
-  xy: 398, 25
+  xy: 421, 5
   size: 73, 73
   orig: 75, 75
   offset: 1, 1
   index: -1
 pupil_white1
   rotate: false
-  xy: 398, 2
+  xy: 129, 21
   size: 21, 21
   orig: 21, 21
   offset: 0, 0
   index: -1
+rainbow_puke
+  rotate: true
+  xy: 2, 44
+  size: 99, 178
+  orig: 99, 180
+  offset: 0, 0
+  index: -1
+sparkle1
+  rotate: false
+  xy: 321, 145
+  size: 54, 56
+  orig: 56, 58
+  offset: 1, 1
+  index: -1
+sparkle2
+  rotate: false
+  xy: 129, 2
+  size: 17, 17
+  orig: 19, 19
+  offset: 1, 1
+  index: -1
 tail
   rotate: false
-  xy: 324, 217
+  xy: 321, 203
   size: 175, 191
   orig: 175, 191
   offset: 0, 0
+  index: -1
+whiskers1
+  rotate: false
+  xy: 447, 86
+  size: 54, 44
+  orig: 56, 46
+  offset: 1, 1
   index: -1
