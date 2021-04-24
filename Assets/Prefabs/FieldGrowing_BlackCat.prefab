@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3756694314190914292}
   - component: {fileID: 3941165135071352531}
   m_Layer: 0
-  m_Name: FieldGrowing_CatBasic
+  m_Name: FieldGrowing_BlackCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 4539331290999341986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.578, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.378, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4371811513939271257}
   m_RootOrder: 0

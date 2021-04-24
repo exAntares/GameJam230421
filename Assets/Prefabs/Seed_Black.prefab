@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3756694314190914292}
   - component: {fileID: 3941165135071352531}
   m_Layer: 0
-  m_Name: BlackSeed
+  m_Name: Seed_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 2
 --- !u!50 &3941165135071352531
 Rigidbody2D:
   serializedVersion: 4

@@ -8,11 +8,14 @@ using UnityEditor;
 #endif
 
 public class CraftingSystem : MonoBehaviour {
+    [SerializeField] private SpriteRenderer _loadingFeedbackPrefab;
+    
     [SerializeField] private IndexedCraftingRecipe[] AllRecipesByCraftingIngredient;
 
     private readonly Dictionary<string, CraftingRecipe[]> _recipesByIngredient = new Dictionary<string, CraftingRecipe[]>();
     private readonly Dictionary<CraftingRecipe, CraftingInstance> _onGoingRecipesEndtimestamp = new Dictionary<CraftingRecipe, CraftingInstance>();
-    
+    private static readonly int Progress = Shader.PropertyToID("Progress");
+
     private void Awake() {
         foreach (var indexedCraftingRecipe in AllRecipesByCraftingIngredient) {
             _recipesByIngredient[indexedCraftingRecipe.IngredientGuid] = indexedCraftingRecipe.Recipes;
@@ -51,19 +54,25 @@ public class CraftingSystem : MonoBehaviour {
         var alreadyDone = new List<CraftingRecipe>();
         foreach (var keyValuePair in _onGoingRecipesEndtimestamp) {
             var craftingInstance = keyValuePair.Value;
+            var block = new MaterialPropertyBlock();
+            craftingInstance.LoadingInstance.GetPropertyBlock(block);
+            block.SetFloat(Progress,
+                (Time.realtimeSinceStartup - craftingInstance.StartTimestamp) /
+                (craftingInstance.EndTimestamp - craftingInstance.StartTimestamp));
+            craftingInstance.LoadingInstance.SetPropertyBlock(block);
             if (craftingInstance.EndTimestamp <= Time.realtimeSinceStartup) {
                 alreadyDone.Add(keyValuePair.Key);
             }
         }
         
         foreach (CraftingRecipe craftingRecipe in alreadyDone) {
-            ResolveRecipe(craftingRecipe);
+            var craftingInstance = _onGoingRecipesEndtimestamp[craftingRecipe];
             _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
+            ResolveRecipe(craftingRecipe, craftingInstance);
         }
     }
 
-    private void ResolveRecipe(CraftingRecipe craftingRecipe) {
-        CraftingInstance craftingInstance = _onGoingRecipesEndtimestamp[craftingRecipe];
+    private void ResolveRecipe(CraftingRecipe craftingRecipe, CraftingInstance craftingInstance) {
         if (craftingRecipe.ShouldConsume1) {
             if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
                 Destroy(craftingInstance.InstanceIngredient1.gameObject);
@@ -86,6 +95,7 @@ public class CraftingSystem : MonoBehaviour {
 
         foreach (var craftingRecipeResult in craftingRecipe.Results) {
             var craftingIngredient = Instantiate(craftingRecipeResult);
+            Destroy(craftingInstance.LoadingInstance.gameObject);
             var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
             var ingredient2Position = craftingInstance.InstanceIngredient2 != null ? craftingInstance.InstanceIngredient2.transform.position : ingredient1Position;
             var spawnPos = ingredient1Position.y > ingredient2Position.y
@@ -109,6 +119,7 @@ public class CraftingSystem : MonoBehaviour {
             _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
                 InstanceIngredient1 = ingredient,
                 InstanceIngredient2 = null,
+                StartTimestamp = Time.realtimeSinceStartup,
                 EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
             });
             Debug.Log($"START crafting recipe {craftingRecipe}");
@@ -132,6 +143,8 @@ public class CraftingSystem : MonoBehaviour {
             _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
                 InstanceIngredient1 = ingredient,
                 InstanceIngredient2 = otherIngredient,
+                LoadingInstance = Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
+                StartTimestamp = Time.realtimeSinceStartup,
                 EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
             });
             Debug.Log($"START crafting recipe {craftingRecipe}");
@@ -140,7 +153,8 @@ public class CraftingSystem : MonoBehaviour {
 
     public void OnCraftingTriggerExit2D(CraftingIngredient ingredient, CraftingIngredient otherIngredient) {
         var craftingRecipe = GetRecipeForIngredients(ingredient, otherIngredient);
-        if (craftingRecipe != null &&_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out _)) {
+        if (craftingRecipe != null &&_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out var instance)) {
+            Destroy(instance.LoadingInstance);
             _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
             Debug.Log($"STOP crafting recipe {craftingRecipe}");
         }
@@ -169,7 +183,9 @@ public class CraftingSystem : MonoBehaviour {
     }
 
     private class CraftingInstance {
+        public float StartTimestamp;
         public float EndTimestamp;
+        public SpriteRenderer LoadingInstance;
         public CraftingIngredient InstanceIngredient1;
         public CraftingIngredient InstanceIngredient2;
     }

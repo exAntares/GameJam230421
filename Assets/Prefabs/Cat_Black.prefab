@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4718183429820530032}
   - component: {fileID: 8181141403334609763}
   m_Layer: 0
-  m_Name: Cat_Basic
+  m_Name: Cat_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,7 +325,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7473552507087106503
 MonoBehaviour:
