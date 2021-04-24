@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
+  m_Name: FieldGrowing_RainbowCat
+  m_EditorClassIdentifier: 
+  Ingredient1: {fileID: 2692574951509842508, guid: 9e7508130508d364ebf087650e8652d6, type: 3}
+  ShouldConsume1: 1
+  Ingredient2: {fileID: 2692574951509842508, guid: ae78f46971e1682408598b3e33dfa4fc, type: 3}
+  ShouldConsume2: 1
+  CreationTime: 0.5
+  Results:
+  - {fileID: 2692574951509842508, guid: 0398e313ca8396948bb271bdfa0313de, type: 3}
