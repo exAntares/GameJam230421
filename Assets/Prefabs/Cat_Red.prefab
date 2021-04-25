@@ -137,7 +137,7 @@ MonoBehaviour:
   _puke: {fileID: 11400000, guid: 2ce19a9f41030485eb60700b38e45980, type: 2}
   _dragRelease: {fileID: 11400000, guid: 7983c71e063794bb1824c3a0a6984039, type: 2}
   _seedPrefab: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
-  _randomRangeMinMax: {x: 50, y: 120}
+  _randomRangeMinMax: {x: 30, y: 70}
   _offset: {x: 0.395, y: -0.6225, z: 0}
   _pukeSound: {fileID: 11400000, guid: a5ec8ce08876845eab0a5c4e4de45f0b, type: 2}
 --- !u!1 &9041567902539182075
