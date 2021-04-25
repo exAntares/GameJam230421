@@ -6,28 +6,28 @@ filter: Linear,Linear
 repeat: none
 arm2
   rotate: false
-  xy: 1188, 21
+  xy: 1253, 21
   size: 32, 41
   orig: 32, 41
   offset: 0, 0
   index: -1
 body1
   rotate: true
-  xy: 1402, 94
+  xy: 1518, 94
   size: 160, 100
   orig: 190, 219
   offset: 19, 0
   index: -1
 body_patch
   rotate: true
-  xy: 1028, 17
+  xy: 999, 17
   size: 45, 40
   orig: 45, 40
   offset: 0, 0
   index: -1
 body_patch_rainbow
   rotate: true
-  xy: 1070, 17
+  xy: 1041, 17
   size: 45, 40
   orig: 45, 40
   offset: 0, 0
@@ -41,14 +41,14 @@ cheek
   index: -1
 eye_drag
   rotate: false
-  xy: 844, 14
+  xy: 583, 7
   size: 41, 48
   orig: 41, 48
   offset: 0, 0
   index: -1
 eyeball1
   rotate: false
-  xy: 1313, 5
+  xy: 1287, 5
   size: 70, 70
   orig: 70, 70
   offset: 0, 0
@@ -75,29 +75,29 @@ eyelash
   offset: 0, 1
   index: -1
 eyelidBOTTOM
-  rotate: false
-  xy: 482, 4
+  rotate: true
+  xy: 1359, 5
   size: 70, 34
   orig: 70, 34
   offset: 0, 0
   index: -1
 eyelidTOP
   rotate: false
-  xy: 1112, 18
+  xy: 1177, 18
   size: 74, 44
   orig: 74, 44
   offset: 0, 0
   index: -1
 foot1
   rotate: true
-  xy: 799, 6
+  xy: 813, 6
   size: 56, 43
   orig: 56, 43
   offset: 0, 0
   index: -1
 foot_drag
   rotate: true
-  xy: 554, 3
+  xy: 525, 3
   size: 52, 56
   orig: 55, 58
   offset: 3, 0
@@ -146,9 +146,30 @@ head5
   index: -1
 index_finger
   rotate: true
-  xy: 1385, 7
+  xy: 1395, 7
   size: 68, 135
   orig: 68, 135
+  offset: 0, 0
+  index: -1
+mermaid_bra
+  rotate: false
+  xy: 446, 3
+  size: 41, 35
+  orig: 41, 35
+  offset: 0, 0
+  index: -1
+mermaid_tail
+  rotate: true
+  xy: 1402, 90
+  size: 164, 114
+  orig: 164, 114
+  offset: 0, 0
+  index: -1
+mermaid_tail_tip
+  rotate: false
+  xy: 1083, 18
+  size: 92, 44
+  orig: 92, 47
   offset: 0, 0
   index: -1
 middle_fingers
@@ -202,7 +223,7 @@ nose1
   index: -1
 phoenix_hairs
   rotate: true
-  xy: 721, 6
+  xy: 735, 6
   size: 56, 76
   orig: 56, 76
   offset: 0, 0
@@ -216,14 +237,14 @@ phoenix_tail
   index: -1
 phoenix_wing
   rotate: true
-  xy: 1580, 16
+  xy: 1731, 16
   size: 100, 95
   orig: 101, 95
   offset: 1, 0
   index: -1
 pinky_finger
-  rotate: true
-  xy: 1504, 98
+  rotate: false
+  xy: 1573, 18
   size: 156, 74
   orig: 156, 74
   offset: 0, 0
@@ -236,29 +257,29 @@ puke_drop
   offset: 0, 0
   index: -1
 puke_ground
-  rotate: false
-  xy: 1222, 23
+  rotate: true
+  xy: 1532, 3
   size: 89, 39
   orig: 89, 39
   offset: 0, 0
   index: -1
 pupil1
   rotate: false
-  xy: 887, 17
+  xy: 858, 17
   size: 45, 45
   orig: 45, 45
   offset: 0, 0
   index: -1
 pupil2
   rotate: false
-  xy: 934, 17
+  xy: 905, 17
   size: 45, 45
   orig: 45, 45
   offset: 0, 0
   index: -1
 pupil4
   rotate: false
-  xy: 981, 17
+  xy: 952, 17
   size: 45, 45
   orig: 45, 45
   offset: 0, 0
@@ -279,7 +300,7 @@ rainbow
   index: -1
 rainbow_puke
   rotate: true
-  xy: 612, 3
+  xy: 626, 3
   size: 59, 107
   orig: 59, 108
   offset: 0, 0
@@ -293,7 +314,7 @@ shadow
   index: -1
 sparkle1
   rotate: false
-  xy: 446, 3
+  xy: 489, 3
   size: 34, 35
   orig: 34, 35
   offset: 0, 0
@@ -307,7 +328,7 @@ sparkle2
   index: -1
 tail2
   rotate: true
-  xy: 1580, 118
+  xy: 1620, 118
   size: 136, 120
   orig: 136, 120
   offset: 0, 0
