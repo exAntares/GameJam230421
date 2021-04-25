@@ -18,7 +18,7 @@ public class CraftingSystem : MonoBehaviour {
 
     private void Awake() {
         foreach (var indexedCraftingRecipe in AllRecipesByCraftingIngredient) {
-            _recipesByIngredient[indexedCraftingRecipe.IngredientGuid] = indexedCraftingRecipe.Recipes;
+            _recipesByIngredient[indexedCraftingRecipe.CraftingIngredient.CraftingId] = indexedCraftingRecipe.Recipes;
         }
     }
 
@@ -30,22 +30,24 @@ public class CraftingSystem : MonoBehaviour {
             .Where(x => x.Ingredient1 != null)
             .ToArray();
         
-        var dictionary = new Dictionary<string, List<CraftingRecipe>>();
+        var dictionary = new Dictionary<CraftingIngredient, List<CraftingRecipe>>();
         foreach (var craftingRecipe in allRecipes) {
-            TryAdd(dictionary, craftingRecipe, craftingRecipe.Ingredient1.CraftingId);
+            TryAdd(dictionary, craftingRecipe, craftingRecipe.Ingredient1);
             if (craftingRecipe.Ingredient2 != null) {
-                TryAdd(dictionary, craftingRecipe, craftingRecipe.Ingredient2.CraftingId);
+                TryAdd(dictionary, craftingRecipe, craftingRecipe.Ingredient2);
             }
         }
 
         var allRecipesByCraftingIngredient = new List<IndexedCraftingRecipe>(dictionary.Count);
         foreach (var keyValuePair in dictionary) {
             allRecipesByCraftingIngredient.Add(new IndexedCraftingRecipe {
-                IngredientGuid = keyValuePair.Key,
+                Name = keyValuePair.Key.name,
+                CraftingIngredient = keyValuePair.Key,
                 Recipes = keyValuePair.Value.ToArray()
             });
         }
 
+        allRecipesByCraftingIngredient.Sort((x,y) => string.CompareOrdinal(x.CraftingIngredient.name, y.CraftingIngredient.name));
         AllRecipesByCraftingIngredient = allRecipesByCraftingIngredient.ToArray();
 #endif
     }
@@ -102,11 +104,11 @@ public class CraftingSystem : MonoBehaviour {
         foreach (var craftingRecipeResult in craftingInstance.Recipe.Results) {
             var craftingIngredient = Instantiate(craftingRecipeResult, spawnPos, Quaternion.identity);
             Destroy(craftingInstance.LoadingInstance.gameObject);
-            Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}");
+            Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}", craftingInstance.Recipe);
         }
     }
 
-    private static void TryAdd(Dictionary<string, List<CraftingRecipe>> dictionary,CraftingRecipe craftingRecipe, string ingredient) {
+    private static void TryAdd(Dictionary<CraftingIngredient, List<CraftingRecipe>> dictionary, CraftingRecipe craftingRecipe, CraftingIngredient ingredient) {
         if (!dictionary.TryGetValue(ingredient, out var list)) {
             list = new List<CraftingRecipe>();
         }
@@ -130,7 +132,7 @@ public class CraftingSystem : MonoBehaviour {
                 Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
                 ingredient,
                 null));
-            Debug.Log($"START crafting recipe {craftingRecipe}");
+            Debug.Log($"START crafting recipe {craftingRecipe}", craftingRecipe);
         }
     }
 
@@ -157,7 +159,7 @@ public class CraftingSystem : MonoBehaviour {
                     Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
                     ingredient,
                     otherIngredient));
-                Debug.Log($"START crafting recipe {craftingRecipe}");                
+                Debug.Log($"START crafting recipe {craftingRecipe}", craftingRecipe);                
             }
         }
     }
@@ -188,10 +190,9 @@ public class CraftingSystem : MonoBehaviour {
         if (_recipesByIngredient.TryGetValue(ingredient.CraftingId, out var recipes)) {
             foreach (var craftingRecipe in recipes) {
                 if (craftingRecipe.Ingredient1 != null && craftingRecipe.Ingredient2 != null) {
-                    if (craftingRecipe.Ingredient1.CraftingId == ingredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == ingredient.CraftingId) {
-                        if (craftingRecipe.Ingredient1.CraftingId == otherIngredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == otherIngredient.CraftingId) {
-                            return craftingRecipe;
-                        }
+                    if ((craftingRecipe.Ingredient1.CraftingId == ingredient.CraftingId && craftingRecipe.Ingredient2.CraftingId == otherIngredient.CraftingId)
+                    || (craftingRecipe.Ingredient2.CraftingId == ingredient.CraftingId && craftingRecipe.Ingredient1.CraftingId == otherIngredient.CraftingId)) {
+                        return craftingRecipe;
                     }
                 }
             }
@@ -201,7 +202,8 @@ public class CraftingSystem : MonoBehaviour {
     
     [Serializable]
     private class IndexedCraftingRecipe {
-        public string IngredientGuid;
+        public string Name;
+        public CraftingIngredient CraftingIngredient;
         public CraftingRecipe[] Recipes;
     }
 

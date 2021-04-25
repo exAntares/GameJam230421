@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ba191a3eaa4554aa76bb91448f0470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CraftingId: 
+  CraftingId: a918ae8d205a50f4c980d9d2e5d514aa
 --- !u!114 &5616288399988062871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +70,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
