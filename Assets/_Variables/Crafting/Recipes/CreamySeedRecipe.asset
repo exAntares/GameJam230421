@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
   m_Name: CreamySeedRecipe
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: a6271c05672984851a8e887ad1a68daf, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
   ShouldConsume1: 1
   Ingredient2: {fileID: 1183724608808262377, guid: 2c40bce9e007a2e4cb0423185bdc5b31, type: 3}
   ShouldConsume2: 0

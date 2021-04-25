@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
   m_Name: GraySeedRecipe
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: a6271c05672984851a8e887ad1a68daf, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
   ShouldConsume1: 1
   Ingredient2: {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}
   ShouldConsume2: 0
