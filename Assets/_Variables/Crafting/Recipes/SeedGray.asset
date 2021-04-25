@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient1: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
   ShouldConsume1: 1
-  Ingredient2: {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}
+  Ingredient2: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
   ShouldConsume2: 0
   CreationTime: 5
   Results:
   - {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
+  SpawnPos: 0

@@ -45,6 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadingFeedbackPrefab: {fileID: 1202904502971038265, guid: f2072cf47aebf4381bb38d302488c448, type: 3}
   AllRecipesByCraftingIngredient:
+  - Name: Cat_Basic
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 6d0ae5cd9e47a8e4e8a747bc3d439366, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 44929ab922311264c9b9ba343b1496ae, type: 2}
+  - Name: Cat_Red
+    CraftingIngredient: {fileID: 2692574951509842508, guid: ade5a4f6df56944d8b165c9987a47636, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: bb32db06ea0791f4f96ec9a928a8b596, type: 2}
+  - Name: Cat_Sleepy
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 65b8a7a79ff144507b03060ab98684a1, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 8fe35ba22d22a724f87824d3761618d1, type: 2}
   - Name: CoffeeCup
     CraftingIngredient: {fileID: 1183724608808262377, guid: 2c40bce9e007a2e4cb0423185bdc5b31, type: 3}
     Recipes:
@@ -87,23 +99,31 @@ MonoBehaviour:
   - Name: Fire
     CraftingIngredient: {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}
     Recipes:
+    - {fileID: 11400000, guid: bb32db06ea0791f4f96ec9a928a8b596, type: 2}
+    - {fileID: 11400000, guid: a5d322d19965d9a43b06b381a1eab2a1, type: 2}
     - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
-    - {fileID: 11400000, guid: cd4bfa4ca10b2416d8768a9d4c5b2946, type: 2}
   - Name: Oven
     CraftingIngredient: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
     Recipes:
+    - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
+    - {fileID: 11400000, guid: cd4bfa4ca10b2416d8768a9d4c5b2946, type: 2}
     - {fileID: 11400000, guid: ca74fc35b7b9b56408f5c82ef9ff3f92, type: 2}
     - {fileID: 11400000, guid: 4c0f2090bdae4a643b3188ab0b40fb98, type: 2}
   - Name: RainbowCloudCraftingStation
     CraftingIngredient: {fileID: 8673878547632983364, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
     Recipes:
     - {fileID: 11400000, guid: f14a6938d92d09147868c085ee19cb2e, type: 2}
+  - Name: RedChili
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 5ad9d072d22dddc4bb5eecac0b165cf7, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 44929ab922311264c9b9ba343b1496ae, type: 2}
   - Name: Seed_Basic
     CraftingIngredient: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
     Recipes:
     - {fileID: 11400000, guid: 90aacf6f47ae3e742ad8a9d757dbf8e7, type: 2}
     - {fileID: 11400000, guid: 606ee32b1b7e06140a707baa563b331e, type: 2}
     - {fileID: 11400000, guid: cd4bfa4ca10b2416d8768a9d4c5b2946, type: 2}
+    - {fileID: 11400000, guid: a3b43e46f56bf0e499021091074931a2, type: 2}
     - {fileID: 11400000, guid: f14a6938d92d09147868c085ee19cb2e, type: 2}
     - {fileID: 11400000, guid: 4c0f2090bdae4a643b3188ab0b40fb98, type: 2}
     - {fileID: 11400000, guid: 977d0a60ed7406d44bc9d6f425f11e29, type: 2}
@@ -122,7 +142,6 @@ MonoBehaviour:
     CraftingIngredient: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
     Recipes:
     - {fileID: 11400000, guid: ddb49fdf4110eec478ad6b7002fc7aba, type: 2}
-    - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
     - {fileID: 11400000, guid: 77a8dba949d9a7f4cb9d0e344129ce0c, type: 2}
     - {fileID: 11400000, guid: ca74fc35b7b9b56408f5c82ef9ff3f92, type: 2}
   - Name: Seed_Rainbow
@@ -136,6 +155,7 @@ MonoBehaviour:
   - Name: Seed_red
     CraftingIngredient: {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
     Recipes:
+    - {fileID: 11400000, guid: a5d322d19965d9a43b06b381a1eab2a1, type: 2}
     - {fileID: 11400000, guid: e8c36876bf82d488aaf3edcd0b36b158, type: 2}
     - {fileID: 11400000, guid: 3ecf48351e3a17946b6947c2b61a62d4, type: 2}
   - Name: Tree
@@ -147,8 +167,10 @@ MonoBehaviour:
     CraftingIngredient: {fileID: 4844334495058119074, guid: b95546a413dec414798964713875317b, type: 3}
     Recipes:
     - {fileID: 11400000, guid: 606ee32b1b7e06140a707baa563b331e, type: 2}
+    - {fileID: 11400000, guid: a3b43e46f56bf0e499021091074931a2, type: 2}
     - {fileID: 11400000, guid: 3ecf48351e3a17946b6947c2b61a62d4, type: 2}
   - Name: Water
     CraftingIngredient: {fileID: 2692574951509842508, guid: 11aa1adfac3ca4beabc6718f521af97b, type: 3}
     Recipes:
+    - {fileID: 11400000, guid: 8fe35ba22d22a724f87824d3761618d1, type: 2}
     - {fileID: 11400000, guid: 227b891dcd24d499082412dc05fd5a3c, type: 2}
