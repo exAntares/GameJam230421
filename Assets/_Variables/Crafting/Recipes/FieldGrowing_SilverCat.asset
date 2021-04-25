@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
-  m_Name: SeedBlack
+  m_Name: FieldGrowing_SilverCat
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
-  ShouldConsume1: 0
-  Ingredient2: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: 9e7508130508d364ebf087650e8652d6, type: 3}
+  ShouldConsume1: 1
+  Ingredient2: {fileID: 2692574951509842508, guid: 32a5318f7b3dc7b4b90e6dba4e5613c8, type: 3}
   ShouldConsume2: 1
-  CreationTime: 3
+  CreationTime: 0.5
   Results:
-  - {fileID: 2692574951509842508, guid: 3eb452aa227304db9b72d969a965741c, type: 3}
+  - {fileID: 2692574951509842508, guid: 1462f484371254bbf8de530ee8365e7f, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
   SpawnPos: 0

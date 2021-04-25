@@ -68,9 +68,11 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: 90aacf6f47ae3e742ad8a9d757dbf8e7, type: 2}
     - {fileID: 11400000, guid: a79ac2d722f87fd4c9867c8740c3b718, type: 2}
+    - {fileID: 11400000, guid: b07eef0a20d6145ef9f6c5e8a061cd05, type: 2}
     - {fileID: 11400000, guid: ddb49fdf4110eec478ad6b7002fc7aba, type: 2}
     - {fileID: 11400000, guid: 54c9c125361380e4b9d76acba07de33f, type: 2}
     - {fileID: 11400000, guid: e8c36876bf82d488aaf3edcd0b36b158, type: 2}
+    - {fileID: 11400000, guid: aaa144999d77744c7952d5312326b81d, type: 2}
     - {fileID: 11400000, guid: aed9d74e345a84beb9465c6b92606f4b, type: 2}
   - Name: FieldGrowing_BlackCat
     CraftingIngredient: {fileID: 2692574951509842508, guid: a8cbf44698b54734a946a5273193b195, type: 3}
@@ -80,6 +82,10 @@ MonoBehaviour:
     CraftingIngredient: {fileID: 2692574951509842508, guid: 029127e1d61bb6840b9cc71b8fcbfa06, type: 3}
     Recipes:
     - {fileID: 11400000, guid: 127b7b7acf9fbab4f8dba434d38c0dd3, type: 2}
+  - Name: FieldGrowing_GoldenCat
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 6dec8ed4442f94cab8b7da37496e7348, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 68d0738b0832245b3ae4d2f34dee2da8, type: 2}
   - Name: FieldGrowing_GreyCat
     CraftingIngredient: {fileID: 2692574951509842508, guid: f6316612ea62d504384ee058323b58ac, type: 3}
     Recipes:
@@ -92,6 +98,10 @@ MonoBehaviour:
     CraftingIngredient: {fileID: 2692574951509842508, guid: 894e9ba19f82c49a7acc7f85dd981a7b, type: 3}
     Recipes:
     - {fileID: 11400000, guid: 3e2870276c1544170b318051d97596d0, type: 2}
+  - Name: FieldGrowing_SilverCat
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 1462f484371254bbf8de530ee8365e7f, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 87722dfa62fc84f3b8b57054c9c0a509, type: 2}
   - Name: FieldGrowing_SleepyCat
     CraftingIngredient: {fileID: 2692574951509842508, guid: 560b07ee422964c2190244c7046db555, type: 3}
     Recipes:
@@ -101,13 +111,13 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: bb32db06ea0791f4f96ec9a928a8b596, type: 2}
     - {fileID: 11400000, guid: a5d322d19965d9a43b06b381a1eab2a1, type: 2}
+    - {fileID: 11400000, guid: 4c0f2090bdae4a643b3188ab0b40fb98, type: 2}
   - Name: Oven
     CraftingIngredient: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
     Recipes:
     - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
     - {fileID: 11400000, guid: cd4bfa4ca10b2416d8768a9d4c5b2946, type: 2}
     - {fileID: 11400000, guid: ca74fc35b7b9b56408f5c82ef9ff3f92, type: 2}
-    - {fileID: 11400000, guid: 4c0f2090bdae4a643b3188ab0b40fb98, type: 2}
   - Name: RainbowCloudCraftingStation
     CraftingIngredient: {fileID: 8673878547632983364, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
     Recipes:
@@ -137,14 +147,20 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: aed9d74e345a84beb9465c6b92606f4b, type: 2}
     - {fileID: 11400000, guid: f71540d0b17847d43aaa944da2d68fb1, type: 2}
+  - Name: Seed_Creamy
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 7c73d7162ffce0240a1f351c6bcbd131, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: ca74fc35b7b9b56408f5c82ef9ff3f92, type: 2}
+  - Name: Seed_Gold
+    CraftingIngredient: {fileID: 2692574951509842508, guid: f88b82903a7e56140b6688317e662a8d, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: b07eef0a20d6145ef9f6c5e8a061cd05, type: 2}
   - Name: Seed_Gray
     CraftingIngredient: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
     Recipes:
-    - {fileID: 11400000, guid: 69270888fc12c0f48bcddb08590a02ff, type: 2}
     - {fileID: 11400000, guid: ddb49fdf4110eec478ad6b7002fc7aba, type: 2}
     - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
     - {fileID: 11400000, guid: 77a8dba949d9a7f4cb9d0e344129ce0c, type: 2}
-    - {fileID: 11400000, guid: ca74fc35b7b9b56408f5c82ef9ff3f92, type: 2}
   - Name: Seed_Rainbow
     CraftingIngredient: {fileID: 2692574951509842508, guid: ae78f46971e1682408598b3e33dfa4fc, type: 3}
     Recipes:
@@ -152,12 +168,13 @@ MonoBehaviour:
   - Name: Seed_Silver
     CraftingIngredient: {fileID: 2692574951509842508, guid: 32a5318f7b3dc7b4b90e6dba4e5613c8, type: 3}
     Recipes:
+    - {fileID: 11400000, guid: aaa144999d77744c7952d5312326b81d, type: 2}
     - {fileID: 11400000, guid: d9117ba6e17ceba4a8ab24216f00d9f7, type: 2}
   - Name: Seed_red
     CraftingIngredient: {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
     Recipes:
-    - {fileID: 11400000, guid: a5d322d19965d9a43b06b381a1eab2a1, type: 2}
     - {fileID: 11400000, guid: e8c36876bf82d488aaf3edcd0b36b158, type: 2}
+    - {fileID: 11400000, guid: a5d322d19965d9a43b06b381a1eab2a1, type: 2}
     - {fileID: 11400000, guid: 3ecf48351e3a17946b6947c2b61a62d4, type: 2}
   - Name: Tree
     CraftingIngredient: {fileID: 2692574951509842508, guid: 5f7371291006d2b49851b8614d9504f2, type: 3}
