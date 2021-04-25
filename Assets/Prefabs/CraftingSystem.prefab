@@ -76,6 +76,16 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: c9908f0df6a39864d9140f96a4233f6a, type: 2}
     - {fileID: 11400000, guid: c9908f0df6a39864d9140f96a4233f6a, type: 2}
+  - Name: Cat_Fish
+    CraftingIngredient: {fileID: 2692574951509842508, guid: de386b7482464415396c8647c8243832, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: badbcb633ae5a674bb9344fc96589f36, type: 2}
+    - {fileID: 11400000, guid: badbcb633ae5a674bb9344fc96589f36, type: 2}
+  - Name: Cat_FishGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 3e8a10e68f9b7524d86217b479823ec9, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: c545c87c3bfa11f498d0aad8283fb36f, type: 2}
+    - {fileID: 11400000, guid: c545c87c3bfa11f498d0aad8283fb36f, type: 2}
   - Name: Cat_Golden
     CraftingIngredient: {fileID: 2692574951509842508, guid: 3aa195444d7e544acaaa7be021b773be, type: 3}
     Recipes:
@@ -261,6 +271,8 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: aaa144999d77744c7952d5312326b81d, type: 2}
     - {fileID: 11400000, guid: d9117ba6e17ceba4a8ab24216f00d9f7, type: 2}
+    - {fileID: 11400000, guid: 9d94c6a993cad7740bdca0ec13d469e3, type: 2}
+    - {fileID: 11400000, guid: 9d94c6a993cad7740bdca0ec13d469e3, type: 2}
   - Name: Seed_red
     CraftingIngredient: {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
     Recipes:
