@@ -37,7 +37,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
         SkeletonAnimation.state.SetAnimation(0, _puke.Animation, false);
         SkeletonAnimation.state.AddAnimation(0, _idle.Animation, true, _puke.Animation.Duration);
         _pukeSound.PlayClipAtPoint(transform.position);
-        await UniTask.Delay(TimeSpan.FromSeconds(_puke.Animation.Duration * 0.5f), ignoreTimeScale: false);
+        await UniTask.Delay(TimeSpan.FromSeconds(_puke.Animation.Duration * 0.5f), ignoreTimeScale: false, PlayerLoopTiming.Update, this.GetCancellationTokenOnDestroy());
         if (transform != null) {
             var transform1 = transform;
             var randomPos = new Vector3(Random.Range(-0.25f, 0.25f), Random.Range(-0.25f, 0.25f), 0);
