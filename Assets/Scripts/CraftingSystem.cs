@@ -93,21 +93,40 @@ public class CraftingSystem : MonoBehaviour {
             }
         }
 
-        var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
-        var ingredient2Position = craftingInstance.InstanceIngredient2 != null ? craftingInstance.InstanceIngredient2.transform.position : ingredient1Position;
-        var spawnPos = ingredient1Position.y > ingredient2Position.y
-            ? ingredient1Position
-            : ingredient2Position;
+        var positionA = GetIngredientAPosition(craftingInstance);
+        var positionB = GetIngredientBPosition(craftingInstance);
+        var t = craftingInstance.Recipe.SpawnPos;
+        var spawnPos = positionA * (1-t) + positionB * t;
         
         var particleEffect = Instantiate(craftingInstance.Recipe.ParticleEffectPrefab, spawnPos, Quaternion.identity);
         Destroy(particleEffect, 2.0f);
         foreach (var craftingRecipeResult in craftingInstance.Recipe.Results) {
-            var craftingIngredient = Instantiate(craftingRecipeResult, spawnPos, Quaternion.identity);
+            Instantiate(craftingRecipeResult, spawnPos, Quaternion.identity);
             Destroy(craftingInstance.LoadingInstance.gameObject);
             Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}", craftingInstance.Recipe);
         }
     }
 
+    private static Vector3 GetIngredientAPosition(CraftingInstance craftingInstance) {
+        if (craftingInstance.Recipe.Ingredient1.CraftingId == craftingInstance.InstanceIngredient1.CraftingId) {
+            return craftingInstance.InstanceIngredient1.transform.position;
+        }
+
+        return craftingInstance.InstanceIngredient2.transform.position;
+    }
+
+    private static Vector3 GetIngredientBPosition(CraftingInstance craftingInstance) {
+        if (craftingInstance.Recipe.Ingredient2 != null) {
+            if (craftingInstance.Recipe.Ingredient2.CraftingId == craftingInstance.InstanceIngredient1.CraftingId) {
+                return craftingInstance.InstanceIngredient1.transform.position;
+            }
+
+            return craftingInstance.InstanceIngredient2.transform.position;
+        }
+
+        return craftingInstance.InstanceIngredient1.transform.position;
+    }
+    
     private static void TryAdd(Dictionary<CraftingIngredient, List<CraftingRecipe>> dictionary, CraftingRecipe craftingRecipe, CraftingIngredient ingredient) {
         if (!dictionary.TryGetValue(ingredient, out var list)) {
             list = new List<CraftingRecipe>();

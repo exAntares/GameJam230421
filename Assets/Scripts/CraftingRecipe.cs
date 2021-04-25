@@ -12,4 +12,5 @@ public class CraftingRecipe : ScriptableObject {
     public float CreationTime;
     public CraftingIngredient[] Results;
     public GameObject ParticleEffectPrefab;
+    [Range(0, 1)] public float SpawnPos;
 }

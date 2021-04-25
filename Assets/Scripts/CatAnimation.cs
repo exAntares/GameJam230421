@@ -12,6 +12,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
     [SerializeField] private AnimationReferenceAsset _fall;
     [SerializeField] private AnimationReferenceAsset _idle;
     [SerializeField] private AnimationReferenceAsset _puke;
+    [SerializeField] private AnimationReferenceAsset _dragRelease;
     [SerializeField] private CraftingIngredient _seedPrefab;
     [SerializeField] private Vector2 _randomRangeMinMax = Vector2.one * 5;
     [SerializeField] private Vector3 _offset = new Vector3(0.395000011f, -0.622500002f, 0f);
@@ -49,7 +50,8 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
 
     public void OnEndDrag(PointerEventData eventData) {
         _isDragging = false;
-        SkeletonAnimation.state.SetAnimation(0, _fall.Animation, false);
+        SkeletonAnimation.state.SetAnimation(0, _dragRelease.Animation, false);
+        SkeletonAnimation.state.AddAnimation(0, _fall.Animation, false, _dragRelease.Animation.Duration);
         SkeletonAnimation.state.AddAnimation(0, _idle.Animation, true, _fall.Animation.Duration);
     }
 }
