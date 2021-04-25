@@ -323,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatStartingFeeling
       objectReference: {fileID: 0}
+    - target: {fileID: 6999170849086433449, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
+      propertyPath: _data._objectReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91ae60a7fce64cf46a5b618e89d5ca91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
 --- !u!4 &486587684283185661 stripped
