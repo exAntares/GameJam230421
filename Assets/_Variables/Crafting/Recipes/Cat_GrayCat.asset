@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
   m_Name: Cat_GrayCat
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: 029127e1d61bb6840b9cc71b8fcbfa06, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: f6316612ea62d504384ee058323b58ac, type: 3}
   ShouldConsume1: 1
   Ingredient2: {fileID: 0}
   ShouldConsume2: 0
