@@ -23,6 +23,8 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
     private float _randomTime;
     private bool _isDragging;
 
+    private void OnValidate() => SkeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
+
     private void Awake() => _randomTime = Random.Range(_randomRangeMinMax.x, _randomRangeMinMax.y);
 
     private void Update() {
