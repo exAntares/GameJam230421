@@ -1,62 +1,62 @@
 
 cat_plant.png
-size: 2048,256
+size: 512,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 cat_growing_body
   rotate: false
-  xy: 471, 5
-  size: 279, 242
-  orig: 282, 244
-  offset: 1, 1
+  xy: 285, 2
+  size: 168, 146
+  orig: 169, 146
+  offset: 0, 0
   index: -1
 cat_growing_footL
   rotate: true
-  xy: 2, 2
-  size: 63, 123
-  orig: 65, 125
-  offset: 1, 1
+  xy: 36, 208
+  size: 39, 75
+  orig: 39, 75
+  offset: 0, 0
   index: -1
 cat_growing_footR
-  rotate: true
-  xy: 992, 26
-  size: 106, 102
-  orig: 108, 105
-  offset: 1, 2
+  rotate: false
+  xy: 259, 185
+  size: 65, 62
+  orig: 65, 63
+  offset: 0, 1
   index: -1
 cat_growing_tail
-  rotate: false
-  xy: 1142, 37
-  size: 161, 210
-  orig: 161, 210
+  rotate: true
+  xy: 326, 150
+  size: 97, 126
+  orig: 97, 126
   offset: 0, 0
   index: -1
 terrain1
   rotate: false
-  xy: 752, 33
-  size: 238, 99
-  orig: 240, 101
-  offset: 1, 1
+  xy: 113, 186
+  size: 144, 61
+  orig: 144, 61
+  offset: 0, 0
   index: -1
 terrain2
   rotate: false
-  xy: 752, 134
-  size: 388, 113
-  orig: 390, 115
-  offset: 1, 1
+  xy: 2, 115
+  size: 234, 69
+  orig: 234, 69
+  offset: 0, 0
   index: -1
 terrain_base
   rotate: false
-  xy: 2, 67
-  size: 467, 180
-  orig: 469, 182
-  offset: 1, 1
+  xy: 2, 4
+  size: 281, 109
+  orig: 281, 109
+  offset: 0, 0
   index: -1
 terrain_sprout
-  rotate: false
-  xy: 127, 14
-  size: 44, 51
-  orig: 46, 53
-  offset: 1, 1
+  rotate: true
+  xy: 2, 219
+  size: 28, 32
+  orig: 28, 32
+  offset: 0, 0
   index: -1
