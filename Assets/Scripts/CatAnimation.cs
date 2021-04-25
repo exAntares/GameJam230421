@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using HalfBlind.Audio;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
     [SerializeField] private CraftingIngredient _seedPrefab;
     [SerializeField] private Vector2 _randomRangeMinMax = Vector2.one * 5;
     [SerializeField] private Vector3 _offset = new Vector3(0.395000011f, -0.622500002f, 0f);
+    [SerializeField] private AudioAsset _pukeSound;
     
     private float _elapsed;
     private float _randomTime;
@@ -31,6 +33,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
 
     private async UniTask SpawnSeedAsync() {
         SkeletonAnimation.state.SetAnimation(0, _puke.Animation, false);
+        _pukeSound.PlayClipAtPoint(transform.position);
         await UniTask.Delay(TimeSpan.FromSeconds(_puke.Animation.Duration * 0.5f), ignoreTimeScale: false);
         if (transform != null) {
             var transform1 = transform;
