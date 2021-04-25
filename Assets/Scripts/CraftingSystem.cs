@@ -56,10 +56,10 @@ public class CraftingSystem : MonoBehaviour {
             var craftingInstance = keyValuePair.Value;
             var block = new MaterialPropertyBlock();
             craftingInstance.LoadingInstance.GetPropertyBlock(block);
-            block.SetFloat(Progress,
-                (Time.realtimeSinceStartup - craftingInstance.StartTimestamp) /
-                (craftingInstance.EndTimestamp - craftingInstance.StartTimestamp));
+            block.SetFloat(Progress, (Time.realtimeSinceStartup - craftingInstance.StartTimestamp) / (craftingInstance.EndTimestamp - craftingInstance.StartTimestamp));
             craftingInstance.LoadingInstance.SetPropertyBlock(block);
+            craftingInstance.LoadingInstance.transform.position =
+                craftingInstance.InstanceIngredient1.transform.position + Vector3.up * 1;
             if (craftingInstance.EndTimestamp <= Time.realtimeSinceStartup) {
                 alreadyDone.Add(keyValuePair.Key);
             }
