@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 695265596876372411}
   - component: {fileID: 1729099087056773168}
   - component: {fileID: 6396445639572936617}
-  - component: {fileID: 4267732324795763079}
   m_Layer: 5
   m_Name: CatSlotScriptMachine
   m_TagString: Untagged
@@ -71,19 +70,6 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: ca494d642f22e0b48b868ac99f70e880, type: 2}
---- !u!114 &4267732324795763079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584967218334276630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87b92a8c818674b2491968ef2e5384f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: 74535c086f3da5344a67e9899adf850c, type: 2}
 --- !u!1 &3281485867262139387
 GameObject:
   m_ObjectHideFlags: 0
