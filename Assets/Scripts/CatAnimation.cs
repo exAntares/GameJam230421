@@ -34,6 +34,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
 
     private async UniTask SpawnSeedAsync() {
         SkeletonAnimation.state.SetAnimation(0, _puke.Animation, false);
+        SkeletonAnimation.state.AddAnimation(0, _idle.Animation, true, _puke.Animation.Duration);
         _pukeSound.PlayClipAtPoint(transform.position);
         await UniTask.Delay(TimeSpan.FromSeconds(_puke.Animation.Duration * 0.5f), ignoreTimeScale: false);
         if (transform != null) {

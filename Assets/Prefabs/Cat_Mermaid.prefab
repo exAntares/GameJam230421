@@ -94,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030023456, y: -0.025336027}
+  m_Offset: {x: -0.030023456, y: 0.22403559}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4244981, y: 1.4129469}
+  m_Size: {x: 1.4244981, y: 1.378551}
   m_EdgeRadius: 0
 --- !u!114 &8181141403334609763
 MonoBehaviour:
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 9f8689bd174a34927ad8fc36596cd1ff, type: 2}
-  initialSkinName: grey
+  initialSkinName: mermaid
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatStartingFeeling
       objectReference: {fileID: 0}
+    - target: {fileID: 6999170849086433449, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
+      propertyPath: _data._objectReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4548f5af6c46609429b57d8278bd8102, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
 --- !u!4 &486587684283185661 stripped
