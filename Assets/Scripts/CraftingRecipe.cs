@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -11,6 +12,13 @@ public class CraftingRecipe : ScriptableObject {
     
     public float CreationTime;
     public CraftingIngredient[] Results;
+    public WeightedCraftingIngredient[] ResultsRandom;
     public GameObject ParticleEffectPrefab;
     [Range(0, 1)] public float SpawnPos;
+}
+
+[Serializable]
+public class WeightedCraftingIngredient {
+    public CraftingIngredient Ingredient;
+    public float Weight = 1.0f;
 }

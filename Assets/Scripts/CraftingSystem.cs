@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 #if UNITY_EDITOR
 using System.Linq;
 using UnityEditor;
@@ -102,9 +102,25 @@ public class CraftingSystem : MonoBehaviour {
         Destroy(particleEffect, 2.0f);
         foreach (var craftingRecipeResult in craftingInstance.Recipe.Results) {
             Instantiate(craftingRecipeResult, spawnPos, Quaternion.identity);
-            Destroy(craftingInstance.LoadingInstance.gameObject);
-            Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}", craftingInstance.Recipe);
         }
+
+        var totalWeight = 0.0f;
+        foreach (var weightedCraftingIngredient in craftingInstance.Recipe.ResultsRandom) {
+            totalWeight += weightedCraftingIngredient.Weight;
+        }
+
+        var rewardWeight = Random.Range(0.0f, totalWeight);
+        var currentValue = 0.0f;
+        foreach (var weightedCraftingIngredient in craftingInstance.Recipe.ResultsRandom) {
+            currentValue += weightedCraftingIngredient.Weight;
+            if (currentValue >= rewardWeight) {
+                Instantiate(weightedCraftingIngredient.Ingredient, spawnPos, Quaternion.identity);
+                break;
+            }
+        }
+        
+        Destroy(craftingInstance.LoadingInstance.gameObject);
+        Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}", craftingInstance.Recipe);
     }
 
     private static Vector3 GetIngredientAPosition(CraftingInstance craftingInstance) {

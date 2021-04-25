@@ -17,7 +17,11 @@ MonoBehaviour:
   Ingredient2: {fileID: 2692574951509842508, guid: 11aa1adfac3ca4beabc6718f521af97b, type: 3}
   ShouldConsume2: 0
   CreationTime: 20
-  Results:
-  - {fileID: 2692574951509842508, guid: 2879e56c59e4bdc409e03185713e3f6f, type: 3}
+  Results: []
+  ResultsRandom:
+  - Ingredient: {fileID: 2692574951509842508, guid: 2879e56c59e4bdc409e03185713e3f6f, type: 3}
+    Weight: 1
+  - Ingredient: {fileID: 2692574951509842508, guid: de386b7482464415396c8647c8243832, type: 3}
+    Weight: 3
   ParticleEffectPrefab: {fileID: 100008, guid: 1ca16f2a31fb6a548ad8954bed1d321f, type: 3}
   SpawnPos: 0
