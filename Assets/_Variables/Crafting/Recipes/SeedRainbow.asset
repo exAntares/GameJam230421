@@ -20,3 +20,4 @@ MonoBehaviour:
   Results:
   - {fileID: 2692574951509842508, guid: ae78f46971e1682408598b3e33dfa4fc, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
+  SpawnPos: 1

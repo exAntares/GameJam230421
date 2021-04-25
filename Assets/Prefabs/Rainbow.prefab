@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1670097371986234270
 Transform:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ PlayableDirector:
   - key: {fileID: 32614342321948432, guid: a0be417b8f36e5049a5e7cc4b6cb0063, type: 2}
     value: {fileID: 0}
   - key: {fileID: -4416961755936875603, guid: a0be417b8f36e5049a5e7cc4b6cb0063, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 6661208170487697584}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1670097373224741431
@@ -568,6 +568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RainbowCloudCraftingStation
       objectReference: {fileID: 0}
+    - target: {fileID: 3805436296936712798, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+      propertyPath: m_Size.x
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805436296936712798, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+      propertyPath: m_Offset.x
+      value: 24.24
+      objectReference: {fileID: 0}
     - target: {fileID: 5411332311365503994, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -612,10 +620,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5576922724141940419, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9986409
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576922724141940419, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.99909395
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576922724141940419, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9963758
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576922724141940419, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
 --- !u!4 &6488704321710531977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5411332311365503994, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
+  m_PrefabInstance: {fileID: 1230723096111083123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6661208170487697584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5576922724141940419, guid: 7972601d2d8fa3b4995950dad9491650, type: 3}
   m_PrefabInstance: {fileID: 1230723096111083123}
   m_PrefabAsset: {fileID: 0}
