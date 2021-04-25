@@ -34,7 +34,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
         await UniTask.Delay(TimeSpan.FromSeconds(_puke.Animation.Duration * 0.5f), ignoreTimeScale: false);
         if (transform != null) {
             var transform1 = transform;
-            var randomPos = new Vector3(Random.Range(0, 1), Random.Range(0, 1), 0);
+            var randomPos = new Vector3(Random.Range(-0.25f, 0.25f), Random.Range(-0.25f, 0.25f), 0);
             Instantiate(_seedPrefab, transform1.position + _offset + randomPos, transform1.rotation);
         }
     }

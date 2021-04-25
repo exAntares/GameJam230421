@@ -13,7 +13,7 @@ public class CraftingSystem : MonoBehaviour {
     [SerializeField] private IndexedCraftingRecipe[] AllRecipesByCraftingIngredient;
 
     private readonly Dictionary<string, CraftingRecipe[]> _recipesByIngredient = new Dictionary<string, CraftingRecipe[]>();
-    private readonly Dictionary<CraftingRecipe, CraftingInstance> _onGoingRecipesEndtimestamp = new Dictionary<CraftingRecipe, CraftingInstance>();
+    private readonly List<CraftingInstance> _onGoingRecipesEndtimestamp = new List<CraftingInstance>();
     private static readonly int Progress = Shader.PropertyToID("Progress");
 
     private void Awake() {
@@ -51,9 +51,8 @@ public class CraftingSystem : MonoBehaviour {
     }
 
     private void Update() {
-        var alreadyDone = new List<CraftingRecipe>();
-        foreach (var keyValuePair in _onGoingRecipesEndtimestamp) {
-            var craftingInstance = keyValuePair.Value;
+        var alreadyDone = new List<CraftingInstance>();
+        foreach (var craftingInstance in _onGoingRecipesEndtimestamp) {
             var block = new MaterialPropertyBlock();
             craftingInstance.LoadingInstance.GetPropertyBlock(block);
             block.SetFloat(Progress, (Time.realtimeSinceStartup - craftingInstance.StartTimestamp) / (craftingInstance.EndTimestamp - craftingInstance.StartTimestamp));
@@ -61,39 +60,38 @@ public class CraftingSystem : MonoBehaviour {
             craftingInstance.LoadingInstance.transform.position =
                 craftingInstance.InstanceIngredient1.transform.position + Vector3.up * 1;
             if (craftingInstance.EndTimestamp <= Time.realtimeSinceStartup) {
-                alreadyDone.Add(keyValuePair.Key);
+                alreadyDone.Add(craftingInstance);
             }
         }
         
-        foreach (CraftingRecipe craftingRecipe in alreadyDone) {
-            var craftingInstance = _onGoingRecipesEndtimestamp[craftingRecipe];
-            _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
-            ResolveRecipe(craftingRecipe, craftingInstance);
+        foreach (var craftingInstance in alreadyDone) {
+            _onGoingRecipesEndtimestamp.Remove(craftingInstance);
+            ResolveRecipe(craftingInstance);
         }
     }
 
-    private void ResolveRecipe(CraftingRecipe craftingRecipe, CraftingInstance craftingInstance) {
-        if (craftingRecipe.ShouldConsume1) {
-            if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
+    private void ResolveRecipe(CraftingInstance craftingInstance) {
+        if (craftingInstance.Recipe.ShouldConsume1) {
+            if (craftingInstance.InstanceIngredient1.CraftingId == craftingInstance.Recipe.Ingredient1.CraftingId) {
                 Destroy(craftingInstance.InstanceIngredient1.gameObject);
             }
                     
-            if (craftingInstance.InstanceIngredient2 != null && craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient1.CraftingId) {
+            if (craftingInstance.InstanceIngredient2 != null && craftingInstance.InstanceIngredient2.CraftingId == craftingInstance.Recipe.Ingredient1.CraftingId) {
                 Destroy(craftingInstance.InstanceIngredient2.gameObject);
             }
         }
 
-        if (craftingRecipe.ShouldConsume2) {
-            if (craftingInstance.InstanceIngredient1.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
+        if (craftingInstance.Recipe.ShouldConsume2) {
+            if (craftingInstance.InstanceIngredient1.CraftingId == craftingInstance.Recipe.Ingredient2.CraftingId) {
                 Destroy(craftingInstance.InstanceIngredient1.gameObject);
             }
                     
-            if (craftingInstance.InstanceIngredient2 != null && craftingInstance.InstanceIngredient2.CraftingId == craftingRecipe.Ingredient2.CraftingId) {
+            if (craftingInstance.InstanceIngredient2 != null && craftingInstance.InstanceIngredient2.CraftingId == craftingInstance.Recipe.Ingredient2.CraftingId) {
                 Destroy(craftingInstance.InstanceIngredient2.gameObject);
             }
         }
 
-        foreach (var craftingRecipeResult in craftingRecipe.Results) {
+        foreach (var craftingRecipeResult in craftingInstance.Recipe.Results) {
             var craftingIngredient = Instantiate(craftingRecipeResult);
             Destroy(craftingInstance.LoadingInstance.gameObject);
             var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
@@ -102,6 +100,7 @@ public class CraftingSystem : MonoBehaviour {
                 ? ingredient1Position
                 : ingredient2Position;
             craftingIngredient.transform.position = spawnPos;
+            Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}");
         }
     }
 
@@ -115,14 +114,20 @@ public class CraftingSystem : MonoBehaviour {
 
     public void OnCraftingItemSpawned(CraftingIngredient ingredient) {
         var craftingRecipe = GetRecipeForIngredient(ingredient);
-        if (craftingRecipe != null && !_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out _)) {
-            _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
-                InstanceIngredient1 = ingredient,
-                InstanceIngredient2 = null,
-                LoadingInstance = Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
-                StartTimestamp = Time.realtimeSinceStartup,
-                EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
-            });
+        if (craftingRecipe != null) {
+            foreach (var craftingInstance in _onGoingRecipesEndtimestamp) {
+                if (craftingInstance.Recipe == craftingRecipe && craftingInstance.InstanceIngredient1 == ingredient) {
+                    return;
+                }
+            }
+            
+            _onGoingRecipesEndtimestamp.Add(new CraftingInstance(
+                Time.realtimeSinceStartup,
+                Time.realtimeSinceStartup + craftingRecipe.CreationTime,
+                craftingRecipe,
+                Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
+                ingredient,
+                null));
             Debug.Log($"START crafting recipe {craftingRecipe}");
         }
     }
@@ -140,24 +145,40 @@ public class CraftingSystem : MonoBehaviour {
 
     public void OnCraftingTriggerEnter2D(CraftingIngredient ingredient, CraftingIngredient otherIngredient) {
         var craftingRecipe = GetRecipeForIngredients(ingredient, otherIngredient);
-        if (craftingRecipe != null && !_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out _)) {
-            _onGoingRecipesEndtimestamp.Add(craftingRecipe, new CraftingInstance {
-                InstanceIngredient1 = ingredient,
-                InstanceIngredient2 = otherIngredient,
-                LoadingInstance = Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
-                StartTimestamp = Time.realtimeSinceStartup,
-                EndTimestamp = Time.realtimeSinceStartup + craftingRecipe.CreationTime
-            });
-            Debug.Log($"START crafting recipe {craftingRecipe}");
+        if (craftingRecipe != null) {
+            var runningCraftingInstance = GetRunningCraftingInstance(ingredient, otherIngredient);
+            if (runningCraftingInstance == null) {
+                _onGoingRecipesEndtimestamp.Add(new CraftingInstance(
+                    Time.realtimeSinceStartup,
+                    Time.realtimeSinceStartup + craftingRecipe.CreationTime,
+                    craftingRecipe,
+                    Instantiate(_loadingFeedbackPrefab, ingredient.transform.position, Quaternion.identity),
+                    ingredient,
+                    otherIngredient));
+                Debug.Log($"START crafting recipe {craftingRecipe}");                
+            }
         }
     }
 
+    private CraftingInstance GetRunningCraftingInstance(CraftingIngredient ingredient, CraftingIngredient otherIngredient) {
+        foreach (var craftingInstance in _onGoingRecipesEndtimestamp) {
+            if (craftingInstance.InstanceIngredient1 == ingredient ||
+                craftingInstance.InstanceIngredient1 == otherIngredient) {
+                if (craftingInstance.InstanceIngredient2 == ingredient ||
+                    craftingInstance.InstanceIngredient2 == otherIngredient) {
+                    return craftingInstance;
+                }
+            }  
+        }
+        return null;
+    }
+
     public void OnCraftingTriggerExit2D(CraftingIngredient ingredient, CraftingIngredient otherIngredient) {
-        var craftingRecipe = GetRecipeForIngredients(ingredient, otherIngredient);
-        if (craftingRecipe != null &&_onGoingRecipesEndtimestamp.TryGetValue(craftingRecipe, out var instance)) {
-            Destroy(instance.LoadingInstance);
-            _onGoingRecipesEndtimestamp.Remove(craftingRecipe);
-            Debug.Log($"STOP crafting recipe {craftingRecipe}");
+        var runningCraftingInstance = GetRunningCraftingInstance(ingredient, otherIngredient);
+        if (runningCraftingInstance != null) {
+            Destroy(runningCraftingInstance.LoadingInstance);
+            _onGoingRecipesEndtimestamp.Remove(runningCraftingInstance);
+            Debug.Log($"CANCEL crafting recipe {runningCraftingInstance.Recipe}");
         }
     }
 
@@ -169,13 +190,12 @@ public class CraftingSystem : MonoBehaviour {
                         if (craftingRecipe.Ingredient1.CraftingId == otherIngredient.CraftingId || craftingRecipe.Ingredient2.CraftingId == otherIngredient.CraftingId) {
                             return craftingRecipe;
                         }
-                    }                    
+                    }
                 }
             }
         }
         return null;
     }
-    
     
     [Serializable]
     private class IndexedCraftingRecipe {
@@ -184,10 +204,26 @@ public class CraftingSystem : MonoBehaviour {
     }
 
     private class CraftingInstance {
-        public float StartTimestamp;
-        public float EndTimestamp;
-        public SpriteRenderer LoadingInstance;
-        public CraftingIngredient InstanceIngredient1;
-        public CraftingIngredient InstanceIngredient2;
+        public readonly float StartTimestamp;
+        public readonly float EndTimestamp;
+        public readonly CraftingRecipe Recipe;
+        public readonly SpriteRenderer LoadingInstance;
+        public readonly CraftingIngredient InstanceIngredient1;
+        public readonly CraftingIngredient InstanceIngredient2;
+
+        public CraftingInstance(
+            float startTimestamp,
+            float endTimestamp,
+            CraftingRecipe recipe,
+            SpriteRenderer loadingInstance,
+            CraftingIngredient instanceIngredient1,
+            CraftingIngredient instanceIngredient2) {
+            StartTimestamp = startTimestamp;
+            EndTimestamp = endTimestamp;
+            Recipe = recipe;
+            LoadingInstance = loadingInstance;
+            InstanceIngredient1 = instanceIngredient1;
+            InstanceIngredient2 = instanceIngredient2;
+        }
     }
 }
