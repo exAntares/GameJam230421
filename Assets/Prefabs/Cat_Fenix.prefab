@@ -319,6 +319,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3579736650601196567, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c7eb6ddaac3f0374a9bf246ed4ad9cc9, type: 3}
     - target: {fileID: 4922376470570193331, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
       propertyPath: m_Name
       value: CatStartingFeeling
