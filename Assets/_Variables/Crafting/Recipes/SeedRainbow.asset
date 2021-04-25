@@ -19,5 +19,5 @@ MonoBehaviour:
   CreationTime: 3
   Results:
   - {fileID: 2692574951509842508, guid: ae78f46971e1682408598b3e33dfa4fc, type: 3}
-  ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
+  ParticleEffectPrefab: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
   SpawnPos: 1

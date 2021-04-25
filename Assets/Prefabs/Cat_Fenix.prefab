@@ -319,10 +319,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3579736650601196567, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c7eb6ddaac3f0374a9bf246ed4ad9cc9, type: 3}
     - target: {fileID: 4922376470570193331, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
       propertyPath: m_Name
       value: CatStartingFeeling
       objectReference: {fileID: 0}
+    - target: {fileID: 6999170849086433449, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
+      propertyPath: _data._objectReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91ae60a7fce64cf46a5b618e89d5ca91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
 --- !u!4 &486587684283185661 stripped
