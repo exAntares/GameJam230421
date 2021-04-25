@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 3579736650601196567, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a15b73cafb1255445b2337c9602c169c, type: 3}
+      objectReference: {fileID: 8300000, guid: 1e56cb9c8daae974295398daec4a2d8f, type: 3}
     - target: {fileID: 4922376470570193331, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
       propertyPath: m_Name
       value: CatStartingFeeling
