@@ -101,7 +101,6 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: bb32db06ea0791f4f96ec9a928a8b596, type: 2}
     - {fileID: 11400000, guid: a5d322d19965d9a43b06b381a1eab2a1, type: 2}
-    - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
   - Name: Oven
     CraftingIngredient: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
     Recipes:
@@ -131,7 +130,6 @@ MonoBehaviour:
   - Name: Seed_Black
     CraftingIngredient: {fileID: 2692574951509842508, guid: 3eb452aa227304db9b72d969a965741c, type: 3}
     Recipes:
-    - {fileID: 11400000, guid: 7965cb0c3daf6524ebf6f592f9c4c90a, type: 2}
     - {fileID: 11400000, guid: a79ac2d722f87fd4c9867c8740c3b718, type: 2}
     - {fileID: 11400000, guid: 227b891dcd24d499082412dc05fd5a3c, type: 2}
   - Name: Seed_Blue
@@ -144,6 +142,7 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: 69270888fc12c0f48bcddb08590a02ff, type: 2}
     - {fileID: 11400000, guid: ddb49fdf4110eec478ad6b7002fc7aba, type: 2}
+    - {fileID: 11400000, guid: 32085d2dac40b48dd93e34d22b544dbe, type: 2}
     - {fileID: 11400000, guid: 77a8dba949d9a7f4cb9d0e344129ce0c, type: 2}
     - {fileID: 11400000, guid: ca74fc35b7b9b56408f5c82ef9ff3f92, type: 2}
   - Name: Seed_Rainbow

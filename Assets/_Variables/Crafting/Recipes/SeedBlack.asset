@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SeedBlack
   m_EditorClassIdentifier: 
   Ingredient1: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
-  ShouldConsume1: 1
-  Ingredient2: {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}
-  ShouldConsume2: 0
-  CreationTime: 2
+  ShouldConsume1: 0
+  Ingredient2: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
+  ShouldConsume2: 1
+  CreationTime: 1
   Results:
   - {fileID: 2692574951509842508, guid: 3eb452aa227304db9b72d969a965741c, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
