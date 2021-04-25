@@ -6,7 +6,7 @@ filter: Linear,Linear
 repeat: none
 arm2
   rotate: false
-  xy: 1253, 21
+  xy: 1742, 111
   size: 32, 41
   orig: 32, 41
   offset: 0, 0
@@ -20,14 +20,14 @@ body1
   index: -1
 body_patch
   rotate: true
-  xy: 999, 17
+  xy: 1046, 17
   size: 45, 40
   orig: 45, 40
   offset: 0, 0
   index: -1
 body_patch_rainbow
   rotate: true
-  xy: 1041, 17
+  xy: 1088, 17
   size: 45, 40
   orig: 45, 40
   offset: 0, 0
@@ -48,7 +48,7 @@ eye_drag
   index: -1
 eyeball1
   rotate: false
-  xy: 1287, 5
+  xy: 1300, 5
   size: 70, 70
   orig: 70, 70
   offset: 0, 0
@@ -76,14 +76,14 @@ eyelash
   index: -1
 eyelidBOTTOM
   rotate: true
-  xy: 1359, 5
+  xy: 1372, 5
   size: 70, 34
   orig: 70, 34
   offset: 0, 0
   index: -1
 eyelidTOP
   rotate: false
-  xy: 1177, 18
+  xy: 1224, 18
   size: 74, 44
   orig: 74, 44
   offset: 0, 0
@@ -146,7 +146,7 @@ head5
   index: -1
 index_finger
   rotate: true
-  xy: 1395, 7
+  xy: 1607, 24
   size: 68, 135
   orig: 68, 135
   offset: 0, 0
@@ -167,7 +167,7 @@ mermaid_tail
   index: -1
 mermaid_tail_tip
   rotate: false
-  xy: 1083, 18
+  xy: 1130, 18
   size: 92, 44
   orig: 92, 47
   offset: 0, 0
@@ -237,14 +237,14 @@ phoenix_tail
   index: -1
 phoenix_wing
   rotate: true
-  xy: 1731, 16
+  xy: 1742, 154
   size: 100, 95
   orig: 101, 95
   offset: 1, 0
   index: -1
 pinky_finger
   rotate: false
-  xy: 1573, 18
+  xy: 1408, 14
   size: 156, 74
   orig: 156, 74
   offset: 0, 0
@@ -258,7 +258,7 @@ puke_drop
   index: -1
 puke_ground
   rotate: true
-  xy: 1532, 3
+  xy: 1566, 3
   size: 89, 39
   orig: 89, 39
   offset: 0, 0
@@ -277,9 +277,16 @@ pupil2
   orig: 45, 45
   offset: 0, 0
   index: -1
-pupil4
+pupil3
   rotate: false
   xy: 952, 17
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+pupil4
+  rotate: false
+  xy: 999, 17
   size: 45, 45
   orig: 45, 45
   offset: 0, 0
