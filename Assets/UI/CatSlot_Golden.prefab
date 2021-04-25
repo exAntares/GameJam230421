@@ -94,18 +94,18 @@ PrefabInstance:
     - target: {fileID: 1729099087056773168, guid: b366a0990a845e3408e3335a8950de02, type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 4548f5af6c46609429b57d8278bd8102, type: 2}
+      objectReference: {fileID: 11400000, guid: ea99e56eda28449d594280705c3c18a2, type: 2}
     - target: {fileID: 3281485867262139387, guid: b366a0990a845e3408e3335a8950de02, type: 3}
       propertyPath: m_Name
-      value: CatSlot_Mermaid
+      value: CatSlot_Golden
       objectReference: {fileID: 0}
     - target: {fileID: 5584981372349841004, guid: b366a0990a845e3408e3335a8950de02, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3227fa075998b4c4881627f823797a24, type: 3}
+      objectReference: {fileID: 21300000, guid: ec07a7c01a60646ed98aec49c2384f41, type: 3}
     - target: {fileID: 7778428400353335375, guid: b366a0990a845e3408e3335a8950de02, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3227fa075998b4c4881627f823797a24, type: 3}
+      objectReference: {fileID: 21300000, guid: ec07a7c01a60646ed98aec49c2384f41, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b366a0990a845e3408e3335a8950de02, type: 3}

@@ -16,7 +16,7 @@ MonoBehaviour:
   ShouldConsume1: 0
   Ingredient2: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
   ShouldConsume2: 1
-  CreationTime: 3
+  CreationTime: 8
   Results:
   - {fileID: 2692574951509842508, guid: 3eb452aa227304db9b72d969a965741c, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
