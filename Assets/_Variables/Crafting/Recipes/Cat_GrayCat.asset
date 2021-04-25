@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient1: {fileID: 2692574951509842508, guid: f6316612ea62d504384ee058323b58ac, type: 3}
   ShouldConsume1: 1
-  Ingredient2: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
+  Ingredient2: {fileID: 0}
   ShouldConsume2: 0
   CreationTime: 20
   Results:

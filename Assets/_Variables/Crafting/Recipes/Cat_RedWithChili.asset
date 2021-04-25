@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Cat_RedWithChili
   m_EditorClassIdentifier: 
   Ingredient1: {fileID: 2692574951509842508, guid: 6d0ae5cd9e47a8e4e8a747bc3d439366, type: 3}
-  ShouldConsume1: 0
+  ShouldConsume1: 1
   Ingredient2: {fileID: 2692574951509842508, guid: 5ad9d072d22dddc4bb5eecac0b165cf7, type: 3}
   ShouldConsume2: 1
   CreationTime: 1
   Results:
-  - {fileID: 2692574951509842508, guid: 9e7508130508d364ebf087650e8652d6, type: 3}
+  - {fileID: 2692574951509842508, guid: ade5a4f6df56944d8b165c9987a47636, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
   SpawnPos: 0

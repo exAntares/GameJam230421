@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
-  m_Name: Chili
+  m_Name: RedChili
   m_EditorClassIdentifier: 
   Ingredient1: {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
   ShouldConsume1: 1
