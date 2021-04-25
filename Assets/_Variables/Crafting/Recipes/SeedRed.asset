@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
-  m_Name: BrownSeeds
+  m_Name: SeedRed
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: 3eb452aa227304db9b72d969a965741c, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
   ShouldConsume1: 1
-  Ingredient2: {fileID: 2692574951509842508, guid: 11aa1adfac3ca4beabc6718f521af97b, type: 3}
+  Ingredient2: {fileID: 4789233765727944487, guid: f77d8a77778311e479577e3d5a6691bf, type: 3}
   ShouldConsume2: 0
   CreationTime: 5
   Results:
-  - {fileID: 2692574951509842508, guid: 70892da3d97fd4ae0bf221ce6ce2a37c, type: 3}
+  - {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}

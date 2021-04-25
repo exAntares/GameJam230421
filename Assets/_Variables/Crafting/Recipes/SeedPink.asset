@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
-  m_Name: GraySeedRecipe
+  m_Name: SeedPink
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
   ShouldConsume1: 1
-  Ingredient2: {fileID: 2692574951509842508, guid: 83965775a80ed49e1893164d0c072ff4, type: 3}
+  Ingredient2: {fileID: 4844334495058119074, guid: b95546a413dec414798964713875317b, type: 3}
   ShouldConsume2: 0
   CreationTime: 5
   Results:
-  - {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
+  - {fileID: 2692574951509842508, guid: c6ae0f6267bd8e24cb71ecea8cd8728e, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}

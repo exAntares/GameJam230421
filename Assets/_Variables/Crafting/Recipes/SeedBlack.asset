@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
-  m_Name: BlackSeedRecipe
+  m_Name: SeedBlack
   m_EditorClassIdentifier: 
   Ingredient1: {fileID: 2692574951509842508, guid: 51f9961e349214b08a57a5df7c031b30, type: 3}
   ShouldConsume1: 1

@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
-  m_Name: PinkSeedRecipe
+  m_Name: Cat_Sleepy
   m_EditorClassIdentifier: 
-  Ingredient1: {fileID: 2692574951509842508, guid: 7baea41c899c83940af48da33b0f1b54, type: 3}
+  Ingredient1: {fileID: 2692574951509842508, guid: 560b07ee422964c2190244c7046db555, type: 3}
   ShouldConsume1: 1
-  Ingredient2: {fileID: 4844334495058119074, guid: b95546a413dec414798964713875317b, type: 3}
+  Ingredient2: {fileID: 0}
   ShouldConsume2: 0
-  CreationTime: 5
+  CreationTime: 20
   Results:
-  - {fileID: 2692574951509842508, guid: c6ae0f6267bd8e24cb71ecea8cd8728e, type: 3}
+  - {fileID: 2692574951509842508, guid: 65b8a7a79ff144507b03060ab98684a1, type: 3}
+  - {fileID: 2692574951509842508, guid: 9e7508130508d364ebf087650e8652d6, type: 3}
   ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
