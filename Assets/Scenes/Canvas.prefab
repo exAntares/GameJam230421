@@ -123,6 +123,7 @@ RectTransform:
   m_Children:
   - {fileID: 999396151536803811}
   - {fileID: 999396150939523878}
+  - {fileID: 8521924236712745523}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -321,11 +322,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"ButtonNote","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"DialogNoteBook","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"ButonCloseNote","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"ButtonNote","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"DialogNoteBook","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"ButonCloseNote","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"EmptyAudioSource","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 999396150939523879}
     - {fileID: 999396151536803809}
     - {fileID: 999396151267848726}
+    - {fileID: 3830456844632972468}
 --- !u!114 &999396151159188477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +661,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 999396151106570574}
-  - {fileID: 8521924236712745523}
   m_Father: {fileID: 999396151051025395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1036,13 +1037,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5306327369763660111}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3523778035105683424}
-  m_Father: {fileID: 999396151536803811}
-  m_RootOrder: 1
+  m_Father: {fileID: 999396151051025395}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1075,7 +1076,7 @@ GameObject:
   - component: {fileID: 3523778035105683424}
   - component: {fileID: 3830456844632972468}
   m_Layer: 5
-  m_Name: StartAudio
+  m_Name: EmptyAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

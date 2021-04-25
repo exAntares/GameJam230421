@@ -15,7 +15,6 @@ MonoBehaviour:
   _variations:
   - {fileID: 8300000, guid: 21a72fd52a382094fb2a780bb0d98073, type: 3}
   - {fileID: 8300000, guid: 25a13b5a24f519a4396cc02c75cb8ee3, type: 3}
-  - {fileID: 8300000, guid: 4ea4675b1abf82d46b2d923197dccdcb, type: 3}
   _volume: 1
   _pitchMinMax: {x: 1, y: 1}
   _spatialBlend: 1

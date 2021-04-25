@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e7bab020cd2e948a648c968ff92987, type: 3}
   m_Name: Is_RedCatDiscovered
   m_EditorClassIdentifier: 
-  _initialValue: 1
+  _initialValue: 0
