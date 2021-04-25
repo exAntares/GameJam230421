@@ -94,7 +94,7 @@ PrefabInstance:
     - target: {fileID: 1729099087056773168, guid: b366a0990a845e3408e3335a8950de02, type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: cbc1f564c0c5a4d4cba1524b6125f6ad, type: 2}
+      objectReference: {fileID: 11400000, guid: ef761283dc0474330aa1febeebf97acc, type: 2}
     - target: {fileID: 3281485867262139387, guid: b366a0990a845e3408e3335a8950de02, type: 3}
       propertyPath: m_Name
       value: CatSlot_Fish
