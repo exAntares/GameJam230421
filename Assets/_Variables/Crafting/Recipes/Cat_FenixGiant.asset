@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89e9ea567b5947099bd86a8613198fb, type: 3}
+  m_Name: Cat_FenixGiant
+  m_EditorClassIdentifier: 
+  Ingredient1: {fileID: 2692574951509842508, guid: 45d88bf1735a4ee4cb17ddc4c0a04511, type: 3}
+  ShouldConsume1: 1
+  Ingredient2: {fileID: 2692574951509842508, guid: 45d88bf1735a4ee4cb17ddc4c0a04511, type: 3}
+  ShouldConsume2: 1
+  CreationTime: 5
+  Results:
+  - {fileID: 2692574951509842508, guid: a197b882b62f78841b8dfcba3f663eb3, type: 3}
+  ResultsRandom: []
+  ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}
+  SpawnPos: 0

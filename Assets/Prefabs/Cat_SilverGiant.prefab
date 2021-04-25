@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 4718183429820530032}
   - component: {fileID: 8181141403334609763}
   - component: {fileID: -3332412156149290833}
-  - component: {fileID: 3585325556828404445}
+  - component: {fileID: 3421865308689859494}
   m_Layer: 0
-  m_Name: Cat_Sleepy
+  m_Name: Cat_SilverGiant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,6 +65,7 @@ Transform:
   m_Children:
   - {fileID: 6191267408995112338}
   - {fileID: 5897199091383229634}
+  - {fileID: 6927791263700930174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ba191a3eaa4554aa76bb91448f0470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CraftingId: 65b8a7a79ff144507b03060ab98684a1
+  CraftingId: 38addc716a0f6450886102bc6fffa9fc
 --- !u!61 &4718183429820530032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0106550455, y: -0.012423724}
+  m_Offset: {x: 0.005014658, y: -0.007817}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -105,7 +106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.81762016, y: 0.8964551}
+  m_Size: {x: 0.8405297, y: 0.9340928}
   m_EdgeRadius: 0
 --- !u!114 &8181141403334609763
 MonoBehaviour:
@@ -142,7 +143,7 @@ MonoBehaviour:
   _offset: {x: 0.395, y: -0.6225, z: 0}
   _pukeSound: {fileID: 11400000, guid: a5ec8ce08876845eab0a5c4e4de45f0b, type: 2}
   _pickedUpSFX: {fileID: 11400000, guid: 127e34d46a0970c4d9e3f663dd420cde, type: 2}
---- !u!50 &3585325556828404445
+--- !u!50 &3421865308689859494
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -191,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 9041567902539182075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.43, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.32, y: 0.32, z: 0.32}
   m_Children: []
   m_Father: {fileID: 6191267408995112338}
   m_RootOrder: 0
@@ -259,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 9f8689bd174a34927ad8fc36596cd1ff, type: 2}
-  initialSkinName: sleepy
+  initialSkinName: silver
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -283,6 +284,36 @@ MonoBehaviour:
   _animationName: idle
   loop: 1
   timeScale: 1
+--- !u!1001 &6927791263701062904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4371811513939271257}
+    m_Modifications:
+    - target: {fileID: 400006, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
+--- !u!4 &6927791263700930174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: 8fc06027b01064e4f885fd8dd2929310, type: 3}
+  m_PrefabInstance: {fileID: 6927791263701062904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8995690727141811784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,7 +400,7 @@ PrefabInstance:
     - target: {fileID: 6999170849086433449, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: cbc1f564c0c5a4d4cba1524b6125f6ad, type: 2}
+      objectReference: {fileID: 11400000, guid: 15c8f0b2d16c94f40a727277104ad23f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8be3cc589183ab4ab9863af80d3986c, type: 3}
 --- !u!4 &5897199091383229634 stripped
