@@ -4,5 +4,3 @@ GameJam 23 april 2021
 
 Run local server
 http-server -p 8000
-
-test
