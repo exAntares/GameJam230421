@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ba191a3eaa4554aa76bb91448f0470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CraftingId: 65b8a7a79ff144507b03060ab98684a1
+  CraftingId: 38addc716a0f6450886102bc6fffa9fc
 --- !u!61 &4718183429820530032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   _randomRangeMinMax: {x: 30, y: 70}
   _offset: {x: 0.395, y: -0.6225, z: 0}
   _pukeSound: {fileID: 11400000, guid: a5ec8ce08876845eab0a5c4e4de45f0b, type: 2}
+  _pickedUpSFX: {fileID: 11400000, guid: 127e34d46a0970c4d9e3f663dd420cde, type: 2}
 --- !u!1 &9041567902539182075
 GameObject:
   m_ObjectHideFlags: 0

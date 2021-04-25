@@ -17,6 +17,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
     [SerializeField] private Vector2 _randomRangeMinMax = Vector2.one * 5;
     [SerializeField] private Vector3 _offset = new Vector3(0.395000011f, -0.622500002f, 0f);
     [SerializeField] private AudioAsset _pukeSound;
+    [SerializeField] private AudioAsset _pickedUpSFX;
     
     private float _elapsed;
     private float _randomTime;
@@ -46,6 +47,7 @@ public class CatAnimation : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
 
     public void OnBeginDrag(PointerEventData eventData) {
         _isDragging = true;
+        _pickedUpSFX.PlayClipAtPoint(transform.position);
         SkeletonAnimation.state.SetAnimation(0, _drag.Animation, true);
     }
 

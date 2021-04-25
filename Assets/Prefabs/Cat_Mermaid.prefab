@@ -141,6 +141,7 @@ MonoBehaviour:
   _randomRangeMinMax: {x: 30, y: 70}
   _offset: {x: 0.395, y: -0.6225, z: 0}
   _pukeSound: {fileID: 11400000, guid: a5ec8ce08876845eab0a5c4e4de45f0b, type: 2}
+  _pickedUpSFX: {fileID: 11400000, guid: 127e34d46a0970c4d9e3f663dd420cde, type: 2}
 --- !u!1 &9041567902539182075
 GameObject:
   m_ObjectHideFlags: 0
