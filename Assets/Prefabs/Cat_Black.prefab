@@ -136,7 +136,8 @@ MonoBehaviour:
   _idle: {fileID: 11400000, guid: 372ee988d2a5942e6be8ba2cb44552f6, type: 2}
   _puke: {fileID: 11400000, guid: 2ce19a9f41030485eb60700b38e45980, type: 2}
   _seedPrefab: {fileID: 2692574951509842508, guid: a918ae8d205a50f4c980d9d2e5d514aa, type: 3}
-  _randomRangeMinMax: {x: 10, y: 15}
+  _randomRangeMinMax: {x: 50, y: 120}
+  _offset: {x: 0.395, y: -0.6225, z: 0}
 --- !u!1 &6232665046040034171
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,3 +19,4 @@ MonoBehaviour:
   CreationTime: 5
   Results:
   - {fileID: 2692574951509842508, guid: 07c2da43dd6ff6d49a2c9e8647102d93, type: 3}
+  ParticleEffectPrefab: {fileID: 100018, guid: b34a319271bb64600bda4c752024d773, type: 3}

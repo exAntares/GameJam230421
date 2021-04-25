@@ -10,7 +10,7 @@ public class CraftingIngredient : MonoBehaviour {
     private void OnValidate() {
 #if UNITY_EDITOR
         var assetPath = AssetDatabase.GetAssetPath(this);
-        if (!string.IsNullOrEmpty(assetPath)) {
+        if (!string.IsNullOrEmpty(assetPath) && transform.root == transform) {
             CraftingId = AssetDatabase.GUIDFromAssetPath(assetPath).ToString();
         }
 #endif

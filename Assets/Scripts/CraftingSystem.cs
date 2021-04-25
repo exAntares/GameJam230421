@@ -91,15 +91,17 @@ public class CraftingSystem : MonoBehaviour {
             }
         }
 
+        var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
+        var ingredient2Position = craftingInstance.InstanceIngredient2 != null ? craftingInstance.InstanceIngredient2.transform.position : ingredient1Position;
+        var spawnPos = ingredient1Position.y > ingredient2Position.y
+            ? ingredient1Position
+            : ingredient2Position;
+        
+        var particleEffect = Instantiate(craftingInstance.Recipe.ParticleEffectPrefab, spawnPos, Quaternion.identity);
+        Destroy(particleEffect, 2.0f);
         foreach (var craftingRecipeResult in craftingInstance.Recipe.Results) {
-            var craftingIngredient = Instantiate(craftingRecipeResult);
+            var craftingIngredient = Instantiate(craftingRecipeResult, spawnPos, Quaternion.identity);
             Destroy(craftingInstance.LoadingInstance.gameObject);
-            var ingredient1Position = craftingInstance.InstanceIngredient1.transform.position;
-            var ingredient2Position = craftingInstance.InstanceIngredient2 != null ? craftingInstance.InstanceIngredient2.transform.position : ingredient1Position;
-            var spawnPos = ingredient1Position.y > ingredient2Position.y
-                ? ingredient1Position
-                : ingredient2Position;
-            craftingIngredient.transform.position = spawnPos;
             Debug.Log($"FINISHED crafting recipe {craftingInstance.Recipe}");
         }
     }
