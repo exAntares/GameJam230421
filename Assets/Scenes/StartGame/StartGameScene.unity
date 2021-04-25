@@ -723,7 +723,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -977,7 +977,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   skeletonDataAsset: {fileID: 11400000, guid: 53e0300ede71241f497cc5e0780629e4, type: 2}
-  initialSkinName: default
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   startingAnimation: stage1_idle
@@ -1391,7 +1391,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   skeletonDataAsset: {fileID: 11400000, guid: 53e0300ede71241f497cc5e0780629e4, type: 2}
-  initialSkinName: default
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   startingAnimation: stage2_idle
@@ -1688,12 +1688,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2457,7 +2457,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1227bda21c9c5954da228f4318d9b677, type: 3}
-    m_FontSize: 59
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2511,7 +2511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20966132, y: 0.6528571}
   m_AnchorMax: {x: 0.7453387, y: 0.75000006}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0.1426239}
+  m_AnchoredPosition: {x: 0, y: 0.1426239}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1549205589
@@ -2536,11 +2536,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 41f398ed63b39934c9a13aa413e1b7e7, type: 3}
-    m_FontSize: 30
+    m_FontSize: 71
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 71
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
