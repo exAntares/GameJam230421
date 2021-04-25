@@ -48,7 +48,14 @@ MonoBehaviour:
   - Name: Cat_Basic
     CraftingIngredient: {fileID: 2692574951509842508, guid: 6d0ae5cd9e47a8e4e8a747bc3d439366, type: 3}
     Recipes:
+    - {fileID: 11400000, guid: cd46f4ad8e0b0574394fb94c29806480, type: 2}
+    - {fileID: 11400000, guid: cd46f4ad8e0b0574394fb94c29806480, type: 2}
     - {fileID: 11400000, guid: 44929ab922311264c9b9ba343b1496ae, type: 2}
+  - Name: Cat_BasicGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 699b1204b69e769459efc2a7095b0084, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 6d88375756612fb47b1ac908176df6b2, type: 2}
+    - {fileID: 11400000, guid: 6d88375756612fb47b1ac908176df6b2, type: 2}
   - Name: Cat_Black
     CraftingIngredient: {fileID: 2692574951509842508, guid: 6fd6f182137582a4f9a4f252918d64be, type: 3}
     Recipes:
@@ -59,14 +66,88 @@ MonoBehaviour:
     Recipes:
     - {fileID: 11400000, guid: 2cb2868a39b46c84b903395aaf3fa550, type: 2}
     - {fileID: 11400000, guid: 2cb2868a39b46c84b903395aaf3fa550, type: 2}
+  - Name: Cat_Fenix
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 45d88bf1735a4ee4cb17ddc4c0a04511, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 6e9d261eb5ebe6648a99c4417af823c2, type: 2}
+    - {fileID: 11400000, guid: 6e9d261eb5ebe6648a99c4417af823c2, type: 2}
+  - Name: Cat_FenixGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: a197b882b62f78841b8dfcba3f663eb3, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: c9908f0df6a39864d9140f96a4233f6a, type: 2}
+    - {fileID: 11400000, guid: c9908f0df6a39864d9140f96a4233f6a, type: 2}
+  - Name: Cat_Golden
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 3aa195444d7e544acaaa7be021b773be, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 8c4c1695720413d479c46c78fa2bd794, type: 2}
+    - {fileID: 11400000, guid: 8c4c1695720413d479c46c78fa2bd794, type: 2}
+  - Name: Cat_GoldenGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 49991c4e377f0514690ea083c1db0727, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: f862283a41ca1e344b2f9016368dd6a2, type: 2}
+    - {fileID: 11400000, guid: f862283a41ca1e344b2f9016368dd6a2, type: 2}
+  - Name: Cat_Gray
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 1818cdf0b4aab9c4fa5272e41803b277, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 426643422dde0114286abfe784d52aa0, type: 2}
+    - {fileID: 11400000, guid: 426643422dde0114286abfe784d52aa0, type: 2}
+  - Name: Cat_GrayGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: c2a3b1972a428d04bbe8d345d66560a5, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: ac1aaed2115ef9241a7aa7fbd5b5463e, type: 2}
+    - {fileID: 11400000, guid: ac1aaed2115ef9241a7aa7fbd5b5463e, type: 2}
+  - Name: Cat_Mermaid
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 2879e56c59e4bdc409e03185713e3f6f, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: eb1f1a99adbdd524f945dab2df364a58, type: 2}
+    - {fileID: 11400000, guid: eb1f1a99adbdd524f945dab2df364a58, type: 2}
+  - Name: Cat_MermaidGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: eb848ef27bfc0e04fa750056079a623a, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: fab9d389db05cd246b3a04b6d102d7be, type: 2}
+    - {fileID: 11400000, guid: fab9d389db05cd246b3a04b6d102d7be, type: 2}
+  - Name: Cat_Rainbow
+    CraftingIngredient: {fileID: 2692574951509842508, guid: ec03863e242b84c148ddaab8088c20a0, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 1890613f09816144fa4e9e74e292e8c5, type: 2}
+    - {fileID: 11400000, guid: 1890613f09816144fa4e9e74e292e8c5, type: 2}
+  - Name: Cat_RainbowGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: c7cd3ff179a60c74181ab64580711ebb, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: d3f5624abbab0264dab25af4f085055f, type: 2}
+    - {fileID: 11400000, guid: d3f5624abbab0264dab25af4f085055f, type: 2}
   - Name: Cat_Red
     CraftingIngredient: {fileID: 2692574951509842508, guid: ade5a4f6df56944d8b165c9987a47636, type: 3}
     Recipes:
     - {fileID: 11400000, guid: bb32db06ea0791f4f96ec9a928a8b596, type: 2}
+    - {fileID: 11400000, guid: e76af84119613c242884daf96e674394, type: 2}
+    - {fileID: 11400000, guid: e76af84119613c242884daf96e674394, type: 2}
+  - Name: Cat_RedGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: c9869b0b8f07add4cbfb973885a1ec20, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: c91f3e6562462274ea91a44170e3f1e7, type: 2}
+    - {fileID: 11400000, guid: c91f3e6562462274ea91a44170e3f1e7, type: 2}
+  - Name: Cat_Silver
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 38addc716a0f6450886102bc6fffa9fc, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 49aad455418063241806b6ba315608c9, type: 2}
+    - {fileID: 11400000, guid: 49aad455418063241806b6ba315608c9, type: 2}
+  - Name: Cat_SilverGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 771e7f3d83da36440a3f6cb42d1b93ac, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 00f2608f768b4d64b996c0b7c3cedf94, type: 2}
+    - {fileID: 11400000, guid: 00f2608f768b4d64b996c0b7c3cedf94, type: 2}
   - Name: Cat_Sleepy
     CraftingIngredient: {fileID: 2692574951509842508, guid: 65b8a7a79ff144507b03060ab98684a1, type: 3}
     Recipes:
     - {fileID: 11400000, guid: 8fe35ba22d22a724f87824d3761618d1, type: 2}
+    - {fileID: 11400000, guid: 00efce6c9b8653d46a11f1884793c58c, type: 2}
+    - {fileID: 11400000, guid: 00efce6c9b8653d46a11f1884793c58c, type: 2}
+  - Name: Cat_SleepyGiant
+    CraftingIngredient: {fileID: 2692574951509842508, guid: 857c1de19bfb96441ad5c682e48767e5, type: 3}
+    Recipes:
+    - {fileID: 11400000, guid: 89c6b6f6deda1ab4f98abca4a7f1af58, type: 2}
+    - {fileID: 11400000, guid: 89c6b6f6deda1ab4f98abca4a7f1af58, type: 2}
   - Name: CoffeeCup
     CraftingIngredient: {fileID: 1183724608808262377, guid: 2c40bce9e007a2e4cb0423185bdc5b31, type: 3}
     Recipes:
