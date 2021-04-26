@@ -10,7 +10,7 @@ Find all the cats by drag and drop items with other environment items to discove
 
 # Team
  - Catherine Matheu ([Catherine - GitHub](https://github.com/CatherineMathieu))
- - Ludovica Coratza ([Ludovica - ArtStation](ludovicacoratza.artstation.com))
+ - Ludovica Coratza ([Ludovica - ArtStation](https://ludovicacoratza.artstation.com))
  - Luis Rojas ([exAntares - GitHub](https://github.com/exAntares))
  - Oriana Laplana ([cegata - Facebook](https://www.facebook.com/cegata/))
 
